@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="login_button_padding">12dp</dimen>
+    <dimen name="badge_text_size">14sp</dimen>
+    <dimen name="progressbar_margin_top">5dp</dimen>
+    <dimen name="progress_dialog_padding">10dp</dimen>
+    <dimen name="mainMenu_margin">5dp</dimen>
+    <dimen name="npdsf_main_menu_text_size">14sp</dimen>
+    <dimen name="Main_home_Icon_weight">100dp</dimen>
+    <dimen name="Main_home_Icon_Height">75dp</dimen>
+
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+
+    <dimen name="enr_xlarge_margin">20dp</dimen>
+    <dimen name="enr_small_padding">2dp</dimen>
+    <dimen name="text_size_large">10sp</dimen>
+    <dimen name="enr_large_margin">10dp</dimen>
+    <dimen name="text_size_xx_large">15sp</dimen>
+    <dimen name="enr_normal_padding">5dp</dimen>
+    <dimen name="enr_large_padding">8dp</dimen>
+    <dimen name="questions_top_bottom_margin">-6dp</dimen>
+    <dimen name="text_size_medium">10sp</dimen>
+
+</resources>
