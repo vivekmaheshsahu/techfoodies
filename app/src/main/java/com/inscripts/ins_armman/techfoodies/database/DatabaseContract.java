@@ -27,7 +27,7 @@ public final class DatabaseContract {
         public static final String COLUMN_USERNAME = "username";
         public static final String COLUMN_PASSWORD = "password";
         public static final String COLUMN_PHONE_NO = "phone_no";
-        public static final String COLUMN_USER_TYPE = "superadmin";
+        public static final String COLUMN_USER_TYPE = "usertype";
         public static final String COLUMN_ZONE = "zone";
         public static final String COLUMN_CITY = "city";
         public static final String COLUMN_STATE = "state";

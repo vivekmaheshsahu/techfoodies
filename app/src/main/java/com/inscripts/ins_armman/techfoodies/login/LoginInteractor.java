@@ -45,10 +45,14 @@ public class LoginInteractor implements ILoginInteractor {
             ContentValues values = new ContentValues();
 
             values.put(DatabaseContract.LoginTable.COLUMN_USER_ID, jsonObjectUser.optString("id"));
-            values.put(DatabaseContract.LoginTable.COLUMN_NAME, jsonObjectUser.optString("name"));
+            values.put(DatabaseContract.LoginTable.COLUMN_NAME, jsonObjectUser.optString("first_name"));
             values.put(DatabaseContract.LoginTable.COLUMN_USERNAME, username);
             values.put(DatabaseContract.LoginTable.COLUMN_PASSWORD, password);
-            values.put(DatabaseContract.LoginTable.COLUMN_PHONE_NO, jsonObjectUser.optString("phone_no"));
+            values.put(DatabaseContract.LoginTable.COLUMN_PHONE_NO, jsonObjectUser.optString("contact"));
+            values.put(DatabaseContract.LoginTable.COLUMN_CITY,jsonObjectUser.optString("city"));
+            values.put(DatabaseContract.LoginTable.COLUMN_STATE,jsonObjectUser.optString("state"));
+            values.put(DatabaseContract.LoginTable.COLUMN_USER_TYPE,jsonObjectUser.optString("user_type"));
+            values.put(DatabaseContract.LoginTable.COLUMN_ZONE,jsonObjectUser.optString("zone"));
 
             utility.getDatabase().insert(DatabaseContract.LoginTable.TABLE_NAME, null, values);
         }

@@ -9,9 +9,9 @@ public interface Url {
     //API V2 added after data sync error message structure changed
 
     // String BASE_URL = "http://aww.armman.org/nutrition_API/";
-    String BASE_URL = "http://aww.armman.org/nutrition_API/";
+    String BASE_URL = "http://www.vandanafoods.com/inventory/api/";
 
-    String AUTHENTICATE = "authenticate";
+    String AUTHENTICATE = "login";
     String DOWNLOAD_FORMS = "newjson";
     String DOWNLOAD_HELP_MANUAL = "gethelp";
     String RELEASE = "release";
