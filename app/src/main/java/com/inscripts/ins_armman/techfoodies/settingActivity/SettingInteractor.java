@@ -863,7 +863,6 @@ public class SettingInteractor implements ISettingInteractor, LoaderManager.Load
 //            values.put(RegistrationTable.COLUMN_GENDER, data.getGender());
             values.put(RegistrationTable.COLUMN_REGISTRATION_STATUS, 1);
             values.put(RegistrationTable.COLUMN_SYNC_STATUS, 1);
-            values.put(RegistrationTable.COLUMN_CREATED_ON, data.getCreatedOn());
 
             utility.getDatabase().insert(DatabaseContract.RegistrationTable.TABLE_NAME, null, values);
         }

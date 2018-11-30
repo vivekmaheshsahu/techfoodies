@@ -33,16 +33,20 @@ public class QuestionInteractor {
         this.mContext = mContext;
     }
 
-    public String saveRegistrationDetails(String firstName, String middleName, String mobileNo,
-                                          String address, String dob, String education, String motherId, int registrationStatus) {
+    public String saveRegistrationDetails(String firstName, String address, String s_name,
+                                          String mobileNo, String state, String city, String zone, int registrationStatus) {
         ContentValues values = new ContentValues();
 
         String woman_id = utility.generateUniqueId();
 
         values.put(DatabaseContract.RegistrationTable.COLUMN_UNIQUE_ID, woman_id);
         values.put(DatabaseContract.RegistrationTable.COLUMN_FIRST_NAME, firstName);
-        values.put(DatabaseContract.RegistrationTable.COLUMN_MOBILE_NO, mobileNo);
         values.put(DatabaseContract.RegistrationTable.COLUMN_ADDRESS, address);
+        values.put(DatabaseContract.RegistrationTable.COLUMN_SNAME,s_name);
+        values.put(DatabaseContract.RegistrationTable.COLUMN_MOBILE_NO, mobileNo);
+        values.put(DatabaseContract.RegistrationTable.COLUMN_STATE,state);
+        values.put(DatabaseContract.RegistrationTable.COLUMN_CITY,city);
+        values.put(DatabaseContract.RegistrationTable.COLUMN_ZONE,zone);
         values.put(DatabaseContract.RegistrationTable.COLUMN_REGISTRATION_STATUS, registrationStatus);
         values.put(DatabaseContract.RegistrationTable.COLUMN_CREATED_ON, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US).format(new Date()));
 

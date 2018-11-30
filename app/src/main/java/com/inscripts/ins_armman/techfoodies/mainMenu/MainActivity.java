@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.inscripts.ins_armman.techfoodies.Question_Answer.place_order;
 import com.inscripts.ins_armman.techfoodies.R;
 import com.inscripts.ins_armman.techfoodies.registration.EnrollmentQuestions;
 import com.inscripts.ins_armman.techfoodies.settingActivity.Settings;
@@ -47,8 +48,8 @@ public class MainActivity extends AppCompatActivity implements IMainView, View.O
     public void init() {
         registration = (CardView) findViewById(R.id.card1);
         registration.setOnClickListener(this);
-//        incompleteForm = (CardView) findViewById(R.id.card2);
-//        incompleteForm.setOnClickListener(this);
+        incompleteForm = (CardView) findViewById(R.id.card2);
+        incompleteForm.setOnClickListener(this);
 //        completeForm = (CardView) findViewById(R.id.card3);
 //        completeForm.setOnClickListener(this);
 //        userProfile = (CardView) findViewById(R.id.card4);
@@ -98,16 +99,11 @@ public class MainActivity extends AppCompatActivity implements IMainView, View.O
                 startActivity(intent1);
                 finish();
                 break;
-//
-//            case R.id.card2:
-//                Intent intent2 = new Intent(HomeActivity.this, IncompleteForm.class);
-//                startActivity(intent2);
-//                Intent intent2 = new Intent(HomeActivity.this, displayForm.class);
-//                intent2.putExtra(UNIQUE_ID, "1535524404388.10");
-//                intent2.putExtra(FORM_ID, "5");
-//                startActivity(intent2);
-//                finish();
-//                break;
+            case R.id.card2:
+                Intent intent2 = new Intent(MainActivity.this,place_order.class);
+                startActivity(intent2);
+                finish();
+                break;
 //
 //            case R.id.card3:
 //                 Intent intent3 = new Intent(HomeActivity.this, completedForm.class);

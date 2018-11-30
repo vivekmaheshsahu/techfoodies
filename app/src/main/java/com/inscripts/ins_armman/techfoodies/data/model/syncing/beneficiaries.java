@@ -17,25 +17,16 @@ public class beneficiaries {
     private String address;
     @SerializedName(RegistrationTable.COLUMN_MOBILE_NO)
     private String mobNo;
-//    @SerializedName(RegistrationTable.COLUMN_EDUCATION)
-//    private String education;
-//    @SerializedName(RegistrationTable.COLUMN_DOB)
-//    private String age;
-    @SerializedName(RegistrationTable.COLUMN_CREATED_ON)
-    private String createdOn;
-//    @SerializedName(RegistrationTable.COLUMN_MOTHER_ID)
-//    private String motherId;
-//    @SerializedName(RegistrationTable.COLUMN_GENDER)
-//    private String gender;
-
-
-//    public String getGender() {
-//        return gender;
-//    }
-//
-//    public void setGender(String gender) {
-//        this.gender = gender;
-//    }
+    @SerializedName(RegistrationTable.COLUMN_ALT_CONTACT)
+    private String altNumber;
+    @SerializedName(RegistrationTable.COLUMN_CITY)
+    private String city;
+    @SerializedName(RegistrationTable.COLUMN_STATE)
+    private String state;
+    @SerializedName(RegistrationTable.COLUMN_SNAME)
+    private String sname;
+    @SerializedName(RegistrationTable.COLUMN_ZONE)
+    private String zone;
 
     public String getUniqueId() {
         return uniqueId;
@@ -69,48 +60,59 @@ public class beneficiaries {
         this.mobNo = mobNo;
     }
 
-//    public String getEducation() {
-//        return education;
-//    }
-//
-//    public void setEducation(String education) {
-//        this.education = education;
-//    }
-//
-//    public String getAge() {
-//        return age;
-//    }
-//
-//    public void setAge(String dob) {
-//        this.age = dob;
-//    }
-
-    public String getCreatedOn() {
-        return createdOn;
+    public String getAltNumber() {
+        return altNumber;
     }
 
-    public void setCreatedOn(String createdOn) {
-        this.createdOn = createdOn;
+    public void setAltNumber(String altNumber) {
+        this.altNumber = altNumber;
     }
 
-//    public String getMotherId() {
-//        return motherId;
-//    }
-//
-//    public void setMotherId(String motherId) {
-//        this.motherId = motherId;
-//    }
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getSname() {
+        return sname;
+    }
+
+    public void setSname(String sname) {
+        this.sname = sname;
+    }
+
+
+    public String getZone() {
+        return zone;
+    }
+
+    public void setZone(String zone) {
+        this.zone = zone;
+    }
 
     @Override
+
     public String toString() {
         return "beneficiaries{" +
                 "uniqueId='" + uniqueId + '\'' +
                 ", Name='" + Name + '\'' +
                 ", address='" + address + '\'' +
                 ", mobNo='" + mobNo + '\'' +
-//                ", education='" + education + '\'' +
-//                ", age='" + age + '\'' +
-                ", createdOn='" + createdOn + '\'' +
+                ", altNumber='" + altNumber + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", sname='" + sname + '\'' +
                 '}';
     }
 }

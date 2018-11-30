@@ -59,6 +59,7 @@ public final class DatabaseContract {
         public static final String COLUMN_ZONE = "customer_zone";
         public static final String COLUMN_CITY = "customer_city";
         public static final String COLUMN_STATE = "customer_state";
+        public static final String COLUMN_ALT_CONTACT = "alternative_contact";
         public static final String COLUMN_REGISTRATION_STATUS = "registration_status";
         /*COLUMN_FAILURE_STATUS and COLUMN_FAILURE_REASON column is to maintain
             data sync failure status and reason
@@ -79,6 +80,7 @@ public final class DatabaseContract {
                 COLUMN_CITY + TEXT_TYPE + COMMA_SEP +
                 COLUMN_ZONE + TEXT_TYPE + COMMA_SEP +
                 COLUMN_CREATED_ON + TEXT_TYPE + COMMA_SEP +
+                COLUMN_ALT_CONTACT + TEXT_TYPE + COMMA_SEP +
 
                 COLUMN_SYNC_STATUS + INTEGER_TYPE + " DEFAULT 0" + COMMA_SEP +
                 COLUMN_REGISTRATION_STATUS + INTEGER_TYPE + " DEFAULT 0" + COMMA_SEP +

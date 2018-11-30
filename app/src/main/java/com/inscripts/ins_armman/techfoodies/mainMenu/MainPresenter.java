@@ -132,15 +132,14 @@ public class MainPresenter implements IMainPresenter<IMainView>, IMainInteractor
 
             String uniqueId = cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_UNIQUE_ID));
             details.setUniqueId(uniqueId);
-    //        details.setMotherId(cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_MOTHER_ID)));
-            details.setName(cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_FIRST_NAME)));
+             details.setName(cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_FIRST_NAME)));
             details.setAddress(cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_ADDRESS)));
             details.setMobNo(cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_MOBILE_NO)));
-//            details.setAge(cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_DOB)));
-//            details.setEducation(cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_EDUCATION)));
-            details.setCreatedOn(cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_CREATED_ON)));
-//            details.setGender(cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_GENDER)));
-
+            details.setCity(cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_CITY)));
+            details.setState(cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_STATE)));
+            details.setSname(cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_SNAME)));
+            details.setAltNumber(cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_ALT_CONTACT)));
+            details.setZone(cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_ZONE)));
             regData.add(details);
         }
 
@@ -176,7 +175,6 @@ public class MainPresenter implements IMainPresenter<IMainView>, IMainInteractor
                     markImproperVisitToSync(uniqueId, formId, CHILD_UNREGISTERED_ERROR);
                     return;
                 }
-
             }
 
             Cursor cursorForm = mainInteractor.fetchFormData(cursor.getString(cursor.getColumnIndex(DatabaseContract.FilledFormStatusTable.COLUMN_ID)));
@@ -234,6 +232,8 @@ public class MainPresenter implements IMainPresenter<IMainView>, IMainInteractor
         else {
             try {
                 JSONArray jsonArrayResponse = jsonObjectResponse.getJSONArray(DATA);
+                JSONObject object = jsonArrayResponse.getJSONObject(0);
+                mainInteractor.updateFormSyncStatus(object.optString(UNIQUE_ID), object.optString(FORM_ID));
                 mainInteractor.updateRegistrationSyncStatus(jsonArrayResponse);
             } catch (JSONException e) {
                 e.printStackTrace();

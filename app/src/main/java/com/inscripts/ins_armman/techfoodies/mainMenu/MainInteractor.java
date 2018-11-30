@@ -88,7 +88,7 @@ public class MainInteractor implements IMainInteractor, LoaderManager.LoaderCall
                 + DatabaseContract.RegistrationTable.COLUMN_REGISTRATION_STATUS + " = 1 "
                 + " AND "
                 + DatabaseContract.RegistrationTable.COLUMN_FAILURE_STATUS + " = 0 "
-                + " LIMIT 2 ";
+                + " LIMIT 1 ";
 
         Bundle bundle = new Bundle();
         bundle.putString(Constants.RAW_QUERY, query);
