@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.data.model;
+package tech.foodies.app.techfoodies.data.model;
 
 import com.google.gson.annotations.SerializedName;
 import tech.foodies.ins_armman.techfoodies.data.model.syncing.beneficiaries;

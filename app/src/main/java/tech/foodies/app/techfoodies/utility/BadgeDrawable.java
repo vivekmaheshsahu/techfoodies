@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.utility;
+package tech.foodies.app.techfoodies.utility;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -11,7 +11,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 
-import tech.foodies.ins_armman.techfoodies.R;
+import com.inscripts.app.techfoodies.R;
 
 /**
  * BadgeDrawable is used to draw of display the notification of remaining to sync entry

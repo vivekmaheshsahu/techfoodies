@@ -1,13 +1,12 @@
-package tech.foodies.ins_armman.techfoodies.forms;
+package tech.foodies.app.techfoodies.forms;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.widget.LinearLayout;
 
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.database.DatabaseContract;
-import tech.foodies.ins_armman.techfoodies.utility.utility;
+import tech.foodies.app.techfoodies.database.DatabaseContract;
+import tech.foodies.app.techfoodies.utility.utility;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -18,8 +17,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import static tech.foodies.ins_armman.techfoodies.utility.Keywords.AROGYASAKHI_MOB;
-import static tech.foodies.ins_armman.techfoodies.utility.Keywords.AROGYASAKHI_NAME;
+import static tech.foodies.app.techfoodies.utility.Keywords.AROGYASAKHI_MOB;
+import static tech.foodies.app.techfoodies.utility.Keywords.AROGYASAKHI_NAME;
 
 /**
  * @author Aniket & Vivek  Created on 4/9/2018

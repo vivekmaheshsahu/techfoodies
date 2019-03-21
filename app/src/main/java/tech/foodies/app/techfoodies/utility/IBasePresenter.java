@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.utility;
+package tech.foodies.app.techfoodies.utility;
 
 /**
  * This interface is used for attachView and detch function to follow mvp structure

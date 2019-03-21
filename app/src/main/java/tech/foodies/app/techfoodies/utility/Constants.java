@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.utility;
+package tech.foodies.app.techfoodies.utility;
 
 /**
  * This interface is used for Constant variable which are declare and used in the project

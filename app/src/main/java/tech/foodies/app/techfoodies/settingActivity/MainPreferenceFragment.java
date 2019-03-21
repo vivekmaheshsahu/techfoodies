@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.settingActivity;
+package tech.foodies.app.techfoodies.settingActivity;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -14,8 +14,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.utility.utility;
+import com.inscripts.ins_armman.techfoodies.R;
 
 /**
  * MainPreferenceFragment this class is used to display setting menu and handle it onclick also

@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.settingActivity;
+package tech.foodies.app.techfoodies.settingActivity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -6,24 +6,23 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.data.model.RequestFormModel;
-import tech.foodies.ins_armman.techfoodies.data.model.UpdateModel;
-import tech.foodies.ins_armman.techfoodies.data.model.restoredata.BeneficiariesList;
-import tech.foodies.ins_armman.techfoodies.data.model.restoredata.RestoreDataRequest;
-import tech.foodies.ins_armman.techfoodies.data.model.restoredata.RestoreRegistration;
-import tech.foodies.ins_armman.techfoodies.data.model.restoredata.RestoreVisits;
-import tech.foodies.ins_armman.techfoodies.data.model.syncing.beneficiaries;
-import tech.foodies.ins_armman.techfoodies.database.DatabaseContract;
-import tech.foodies.ins_armman.techfoodies.login.Login;
-import tech.foodies.ins_armman.techfoodies.utility.utility;
+import tech.foodies.app.techfoodies.data.model.RequestFormModel;
+import tech.foodies.app.techfoodies.data.model.UpdateModel;
+import tech.foodies.app.techfoodies.data.model.restoredata.BeneficiariesList;
+import tech.foodies.app.techfoodies.data.model.restoredata.RestoreDataRequest;
+import tech.foodies.app.techfoodies.data.model.restoredata.RestoreRegistration;
+import tech.foodies.app.techfoodies.data.model.restoredata.RestoreVisits;
+import tech.foodies.app.techfoodies.data.model.syncing.beneficiaries;
+import tech.foodies.app.techfoodies.database.DatabaseContract;
+import tech.foodies.app.techfoodies.login.Login;
+import tech.foodies.app.techfoodies.utility.utility;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import tech.foodies.ins_armman.techfoodies.utility.Constants;
+import tech.foodies.app.techfoodies.utility.Constants;
 
 /**
  * @author Aniket & Vivek  Created on 21/8/2018

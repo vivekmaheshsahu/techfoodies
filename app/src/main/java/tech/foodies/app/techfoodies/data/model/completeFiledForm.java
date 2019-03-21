@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.data.model;
+package tech.foodies.app.techfoodies.data.model;
 
 public class completeFiledForm {
 

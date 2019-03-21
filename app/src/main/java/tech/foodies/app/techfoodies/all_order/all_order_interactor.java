@@ -1,10 +1,10 @@
-package tech.foodies.ins_armman.techfoodies.all_order;
+package tech.foodies.app.techfoodies.all_order;
 
 
 import android.content.Context;
 import android.database.Cursor;
 
-import tech.foodies.ins_armman.techfoodies.database.DBHelper;
+import tech.foodies.app.techfoodies.database.DBHelper;
 
 public class all_order_interactor implements Iall_order_interactor {
 

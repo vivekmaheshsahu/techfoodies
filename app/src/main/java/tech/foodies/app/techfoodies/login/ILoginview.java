@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.login;
+package tech.foodies.app.techfoodies.login;
 
 
 import tech.foodies.ins_armman.techfoodies.utility.IMvpView;

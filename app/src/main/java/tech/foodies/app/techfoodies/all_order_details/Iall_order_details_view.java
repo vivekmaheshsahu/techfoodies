@@ -1,8 +1,8 @@
-package tech.foodies.ins_armman.techfoodies.all_order_details;
+package tech.foodies.app.techfoodies.all_order_details;
 
 import android.content.Context;
 
-import tech.foodies.ins_armman.techfoodies.data.model.all_order_model;
+import tech.foodies.app.techfoodies.data.model.all_order_model;
 
 import java.util.List;
 

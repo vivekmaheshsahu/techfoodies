@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.registration;
+package tech.foodies.app.techfoodies.registration;
 
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
@@ -56,15 +56,14 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.clutch.dates.StringToTime;
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.forms.DecimalDigitsInputFilter;
-import tech.foodies.ins_armman.techfoodies.forms.Label;
-import tech.foodies.ins_armman.techfoodies.forms.QuestionInteractor;
-import tech.foodies.ins_armman.techfoodies.forms.SpinnerItems;
-import tech.foodies.ins_armman.techfoodies.forms.Visit;
-import tech.foodies.ins_armman.techfoodies.forms.Visits;
-import tech.foodies.ins_armman.techfoodies.mainMenu.MainActivity;
-import tech.foodies.ins_armman.techfoodies.utility.utility;
+import tech.foodies.app.techfoodies.forms.DecimalDigitsInputFilter;
+import tech.foodies.app.techfoodies.forms.Label;
+import tech.foodies.app.techfoodies.forms.QuestionInteractor;
+import tech.foodies.app.techfoodies.forms.SpinnerItems;
+import tech.foodies.app.techfoodies.forms.Visit;
+import tech.foodies.app.techfoodies.forms.Visits;
+import tech.foodies.app.techfoodies.mainMenu.MainActivity;
+import tech.foodies.app.techfoodies.utility.utility;
 
 import org.joda.time.Days;
 import org.joda.time.Hours;
@@ -100,8 +99,8 @@ import java.util.regex.Pattern;
 
 import bsh.EvalError;
 import bsh.Interpreter;
-import tech.foodies.ins_armman.techfoodies.utility.Constants;
-import tech.foodies.ins_armman.techfoodies.utility.Keywords;
+import tech.foodies.app.techfoodies.utility.Constants;
+import tech.foodies.app.techfoodies.utility.Keywords;
 
 /**
  * This class is used to display questions of registration forms dynamically from the localDB.

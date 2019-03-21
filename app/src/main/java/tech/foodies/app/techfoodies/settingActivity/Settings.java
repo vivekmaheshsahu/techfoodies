@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.settingActivity;
+package tech.foodies.app.techfoodies.settingActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,8 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.mainMenu.MainActivity;
+import com.inscripts.ins_armman.techfoodies.R;
+
+import tech.foodies.app.techfoodies.mainMenu.MainActivity;
 
 /**
  * Setting this class is used to deal with setting fragment is used for easy code and less coding is required then normal coding standard
@@ -35,7 +36,7 @@ public class Settings extends AppCompatActivity {
         switch (item.getItemId())
         {
             case android.R.id.home:
-                Intent intent = new Intent(Settings.this,MainActivity.class);
+                Intent intent = new Intent(Settings.this, MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 finish();

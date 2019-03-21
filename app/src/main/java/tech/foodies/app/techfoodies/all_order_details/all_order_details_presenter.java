@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.all_order_details;
+package tech.foodies.app.techfoodies.all_order_details;
 
 import android.database.Cursor;
 

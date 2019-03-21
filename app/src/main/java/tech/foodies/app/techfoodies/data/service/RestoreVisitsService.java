@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.data.service;
+package tech.foodies.app.techfoodies.data.service;
 
 import android.content.Context;
 

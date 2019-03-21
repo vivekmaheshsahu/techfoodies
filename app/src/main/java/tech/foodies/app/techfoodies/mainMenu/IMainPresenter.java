@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.mainMenu;
+package tech.foodies.app.techfoodies.mainMenu;
 
 import android.database.Cursor;
 

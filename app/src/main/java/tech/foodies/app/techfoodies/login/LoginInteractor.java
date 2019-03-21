@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.login;
+package tech.foodies.app.techfoodies.login;
 
 import android.content.ContentValues;
 import android.content.Context;

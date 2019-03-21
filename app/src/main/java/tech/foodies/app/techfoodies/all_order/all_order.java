@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.all_order;
+package tech.foodies.app.techfoodies.all_order;
 
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
@@ -11,9 +11,9 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.data.model.all_order_model;
+import com.inscripts.app.techfoodies.R;
 
+import tech.foodies.app.techfoodies.data.model.all_order_model;
 import java.util.List;
 
 public class all_order extends AppCompatActivity implements Iall_order_view,OrderFormAdapter.ClickListener  {

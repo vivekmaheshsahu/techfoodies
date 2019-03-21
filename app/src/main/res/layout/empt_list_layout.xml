@@ -17,12 +17,10 @@
             android:id="@+id/text_empty_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/searchview_normal_marging"
             android:gravity="center"
             android:text="@string/Reg_women"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/grey"
-            android:textSize="@dimen/text_size_xxx_large" />
+            android:textColor="@color/grey" />
 
     </LinearLayout>
 

@@ -1,8 +1,8 @@
-package tech.foodies.ins_armman.techfoodies.login;
+package tech.foodies.app.techfoodies.login;
 
 import android.content.Context;
 
-import tech.foodies.ins_armman.techfoodies.data.model.UserDetails;
+import tech.foodies.app.techfoodies.data.model.UserDetails;
 import org.json.JSONException;
 import org.json.JSONObject;
 

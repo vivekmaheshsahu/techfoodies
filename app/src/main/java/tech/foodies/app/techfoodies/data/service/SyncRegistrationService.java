@@ -2,7 +2,6 @@ package tech.foodies.app.techfoodies.data.service;
 
 import android.content.Context;
 
-import tech.foodies.app.techfoodies.R;
 import tech.foodies.app.techfoodies.data.model.SyncRegistrationDetails;
 import tech.foodies.app.techfoodies.mainMenu.IMainInteractor;
 

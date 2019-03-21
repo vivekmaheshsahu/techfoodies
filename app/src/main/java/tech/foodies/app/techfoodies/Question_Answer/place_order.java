@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.Question_Answer;
+package tech.foodies.app.techfoodies.Question_Answer;
 
 import android.content.ContentValues;
 import android.content.Context;

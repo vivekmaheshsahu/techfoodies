@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.data.retrofit;
+package tech.foodies.app.techfoodies.data.retrofit;
 
 import java.util.concurrent.TimeUnit;
 

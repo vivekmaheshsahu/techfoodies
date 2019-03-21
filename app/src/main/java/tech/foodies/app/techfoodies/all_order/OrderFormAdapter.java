@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.all_order;
+package tech.foodies.app.techfoodies.all_order;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,9 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.all_order_date_display.all_order_date_display;
-import tech.foodies.ins_armman.techfoodies.data.model.all_order_model;
+import com.inscripts.ins_armman.techfoodies.R;
+import tech.foodies.app.techfoodies.all_order_date_display.all_order_date_display;
+import tech.foodies.app.techfoodies.data.model.all_order_model;
 
 import java.util.List;
 

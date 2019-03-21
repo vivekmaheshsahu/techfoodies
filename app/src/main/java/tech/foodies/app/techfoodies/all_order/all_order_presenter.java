@@ -1,8 +1,8 @@
-package tech.foodies.ins_armman.techfoodies.all_order;
+package tech.foodies.app.techfoodies.all_order;
 
 import android.database.Cursor;
 
-import tech.foodies.ins_armman.techfoodies.data.model.all_order_model;
+import tech.foodies.app.techfoodies.data.model.all_order_model;
 
 import java.util.ArrayList;
 import java.util.List;

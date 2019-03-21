@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.all_order_date_display;
+package tech.foodies.app.techfoodies.all_order_date_display;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,8 +12,9 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.data.model.all_order_model;
+import com.inscripts.ins_armman.techfoodies.R;
+
+import tech.foodies.app.techfoodies.data.model.all_order_model;
 
 import java.util.List;
 
