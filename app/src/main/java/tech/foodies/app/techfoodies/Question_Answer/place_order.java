@@ -3,43 +3,46 @@ package tech.foodies.app.techfoodies.Question_Answer;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.data.model.syncing.QuestionAnswer;
-import tech.foodies.ins_armman.techfoodies.data.model.syncing.beneficiaries;
-import tech.foodies.ins_armman.techfoodies.database.DatabaseContract;
-import tech.foodies.ins_armman.techfoodies.mainMenu.MainActivity;
-import tech.foodies.ins_armman.techfoodies.utility.utility;
-
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
-import android.widget.*;
+import android.widget.TextView;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.data.model.syncing.QuestionAnswer;
+import tech.foodies.app.techfoodies.data.model.syncing.beneficiaries;
+import tech.foodies.app.techfoodies.database.DatabaseContract;
+import tech.foodies.app.techfoodies.mainMenu.MainActivity;
+import tech.foodies.app.techfoodies.utility.utility;
+
 public class place_order extends AppCompatActivity implements Iplace_order_view {
 
-    private Spinner spinner1;
-    private CardView place_order;
     LinearLayout constraintLayout;
     Spinner spinner;
     EditText editTextquantity;
-    HashMap<String,String> hashMap;
-    String key ="1";
+    HashMap<String, String> hashMap;
+    String key = "1";
     String check_counter = "0";
     place_order_presenter place_order_presenter;
     ArrayList<String> Client_list;
     ArrayList<QuestionAnswer> questionAnswer;
     ArrayList<QuestionAnswer> filledQuestionAnswer;
     ArrayList<beneficiaries> cust_details;
-    String keywor,custID;
+    String keywor, custID;
+    private Spinner spinner1;
+    private CardView place_order;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,13 +53,12 @@ public class place_order extends AppCompatActivity implements Iplace_order_view 
         spinner1 = (Spinner) findViewById(R.id.spinner_cust_name);
         place_order_presenter = new place_order_presenter();
         place_order_presenter.attachView(this);
-        cust_details  = place_order_presenter.fetchUserDetails();
+        cust_details = place_order_presenter.fetchUserDetails();
         questionAnswer = place_order_presenter.fetchQuestionDetails();
         Client_list = new ArrayList<>();
         Client_list.add("Select customer name");
-        for(int i=0;i<cust_details.size();i++)
-        {
-            Client_list.add("Shop Name "+cust_details.get(i).getSname()+" Owner Name "+cust_details.get(i).getName()+" Id:"+cust_details.get(i).getUniqueId());
+        for (int i = 0; i < cust_details.size(); i++) {
+            Client_list.add("Shop Name " + cust_details.get(i).getSname() + " Owner Name " + cust_details.get(i).getName() + " Id:" + cust_details.get(i).getUniqueId());
         }
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, Client_list);
@@ -74,32 +76,32 @@ public class place_order extends AppCompatActivity implements Iplace_order_view 
         });
         filledQuestionAnswer = new ArrayList<>();
     }
+
     public void create_layout() {
         spinner = new Spinner(getApplicationContext());
         Client_list = new ArrayList<>();
         Client_list.add("Select Product name");
-        for(int i=0;i<questionAnswer.size();i++)
-        {
-            Client_list.add("Product Name"+questionAnswer.get(i).getAnswer()+" keyword:"+questionAnswer.get(i).getKeyword());
+        for (int i = 0; i < questionAnswer.size(); i++) {
+            Client_list.add("Product Name" + questionAnswer.get(i).getAnswer() + " keyword:" + questionAnswer.get(i).getKeyword());
         }
 
         TextView textView = new TextView(getApplicationContext());
         textView.setText("Select product name");
-        textView.setPadding(10,10,10,4);
+        textView.setPadding(10, 10, 10, 4);
 
         ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item, Client_list);
         spinner.setAdapter(spinnerArrayAdapter);
-        spinner.setPadding(7,4,10,4);
+        spinner.setPadding(7, 4, 10, 4);
         constraintLayout.addView(textView);
         constraintLayout.addView(spinner);
 
         TextView textView1 = new TextView(getApplicationContext());
         textView1.setText("Enter the quantity");
-        textView1.setPadding(10,4,10,4);
+        textView1.setPadding(10, 4, 10, 4);
 
         editTextquantity = new EditText(getApplicationContext());
         editTextquantity.setInputType(InputType.TYPE_CLASS_NUMBER);
-        editTextquantity.setPadding(10,4,10,10);
+        editTextquantity.setPadding(10, 4, 10, 10);
 
         constraintLayout.addView(textView1);
         constraintLayout.addView(editTextquantity);
@@ -117,7 +119,7 @@ public class place_order extends AppCompatActivity implements Iplace_order_view 
                         } else {
                             String selectedItem = spinner1.getSelectedItem().toString();
                             hashMap.put("Customer_name", selectedItem);
-                            hashMap.put("product"+key, item.toString());
+                            hashMap.put("product" + key, item.toString());
                             key = String.valueOf(Integer.valueOf(key) + 1);
                             check_counter = "1";
                         }
@@ -164,22 +166,20 @@ public class place_order extends AppCompatActivity implements Iplace_order_view 
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent(place_order.this,MainActivity.class);
+        Intent intent = new Intent(place_order.this, MainActivity.class);
         startActivity(intent);
     }
 
 
-    public void submit(View view)
-    {
-         int hashsize = hashMap.size();
-         int size = (hashsize-1)/2;
-         for(int i=1;i<size;i++)
-         {
-             String Quantity = hashMap.get("quantity"+i);
-             String product_keyword = hashMap.get("product"+i);
-             String custName = hashMap.get("Customer_name");
+    public void submit(View view) {
+        int hashsize = hashMap.size();
+        int size = (hashsize - 1) / 2;
+        for (int i = 1; i < size; i++) {
+            String Quantity = hashMap.get("quantity" + i);
+            String product_keyword = hashMap.get("product" + i);
+            String custName = hashMap.get("Customer_name");
 
-            if(product_keyword != null && custName != null) {
+            if (product_keyword != null && custName != null) {
                 String cust[] = custName.split(":");
                 String parts[] = product_keyword.split(":");
 
@@ -194,34 +194,32 @@ public class place_order extends AppCompatActivity implements Iplace_order_view 
                     custID = cust[1];
                 }
             }
-             QuestionAnswer answer = new QuestionAnswer();
-             answer.setAnswer(Quantity);
-             answer.setKeyword(keywor);
-             answer.setCreatedOn(custID);
-             filledQuestionAnswer.add(answer);
-         }
+            QuestionAnswer answer = new QuestionAnswer();
+            answer.setAnswer(Quantity);
+            answer.setKeyword(keywor);
+            answer.setCreatedOn(custID);
+            filledQuestionAnswer.add(answer);
+        }
 
         ContentValues values = new ContentValues();
         values.put(DatabaseContract.FilledFormStatusTable.COLUMN_UNIQUE_ID, custID);
         values.put(DatabaseContract.FilledFormStatusTable.COLUMN_FORM_ID, 2);
         values.put(DatabaseContract.FilledFormStatusTable.COLUMN_FORM_COMPLETION_STATUS, 1);
         values.put(DatabaseContract.FilledFormStatusTable.COLUMN_FORM_SYNC_STATUS, 0);
-        values.put(DatabaseContract.FilledFormStatusTable.COLUMN_CREATED_ON,  utility.getCurrentDateTime());
+        values.put(DatabaseContract.FilledFormStatusTable.COLUMN_CREATED_ON, utility.getCurrentDateTime());
 
         int referenceId = (int) utility.getDatabase().insert(DatabaseContract.FilledFormStatusTable.TABLE_NAME, null, values);
-        saveQuestionAnswers(filledQuestionAnswer,referenceId,custID,2,utility.getCurrentDateTime());
+        saveQuestionAnswers(filledQuestionAnswer, referenceId, custID, 2, utility.getCurrentDateTime());
 
-        Intent intent = new Intent(place_order.this,MainActivity.class);
+        Intent intent = new Intent(place_order.this, MainActivity.class);
         startActivity(intent);
     }
-
 
 
     public void saveQuestionAnswers(ArrayList<QuestionAnswer> filled, int id, String womanId, int formId, String createdOn) {
         ContentValues values = new ContentValues();
 
-        for(int i=0;i<filled.size();i++)
-        {
+        for (int i = 0; i < filled.size(); i++) {
 
             values.put(DatabaseContract.QuestionAnswerTable.COLUMN_REFERENCE_ID, id);
             values.put(DatabaseContract.QuestionAnswerTable.COLUMN_UNIQUE_ID, womanId);
@@ -240,7 +238,7 @@ public class place_order extends AppCompatActivity implements Iplace_order_view 
 //                    , new String[]{String.valueOf(formId), womanId, filled.get(i).getKeyword()});
 //
 //            if (row == 0)
-                utility.getDatabase().insert(DatabaseContract.QuestionAnswerTable.TABLE_NAME, null, values);
+            utility.getDatabase().insert(DatabaseContract.QuestionAnswerTable.TABLE_NAME, null, values);
 
 
             values.clear();

@@ -9,17 +9,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.all_order_details.all_order_details;
-import tech.foodies.ins_armman.techfoodies.data.model.all_order_model;
-
 import java.util.List;
+
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.all_order_details.all_order_details;
+import tech.foodies.app.techfoodies.data.model.all_order_model;
 
 
 public class OrderFormAdapter extends RecyclerView.Adapter<OrderFormAdapter.ViewHolder> {
 
     private Context mContext;
-  private ClickListener clickListener;
+    private ClickListener clickListener;
     private List<all_order_model> mWomenList;
 
     public OrderFormAdapter(Context mContext, List<all_order_model> womenList) {
@@ -27,9 +27,11 @@ public class OrderFormAdapter extends RecyclerView.Adapter<OrderFormAdapter.View
         this.mWomenList = womenList;
 
     }
+
     public void setClickListener(ClickListener clickListener) {
         this.clickListener = clickListener;
     }
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_incomplete_list, parent, false));
@@ -75,10 +77,10 @@ public class OrderFormAdapter extends RecyclerView.Adapter<OrderFormAdapter.View
         @Override
         public void onClick(View v) {
 
-                Intent intent = new Intent(mContext, all_order_details.class);
-                intent.putExtra("id",mWomenList.get(getPosition()).getName());
-                intent.putExtra("createdOn",mWomenList.get(getPosition()).getSname());
-                mContext.startActivity(intent);
+            Intent intent = new Intent(mContext, all_order_details.class);
+            intent.putExtra("id", mWomenList.get(getPosition()).getName());
+            intent.putExtra("createdOn", mWomenList.get(getPosition()).getSname());
+            mContext.startActivity(intent);
 
         }
     }

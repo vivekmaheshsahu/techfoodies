@@ -8,10 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.data.model.completeFiledForm;
-
 import java.util.List;
+
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.data.model.completeFiledForm;
 
 public class completedFormAdapter extends RecyclerView.Adapter<completedFormAdapter.ViewHolder> {
 
@@ -24,9 +24,11 @@ public class completedFormAdapter extends RecyclerView.Adapter<completedFormAdap
         this.mWomenList = womenList;
 
     }
+
     public void setClickListener(ClickListener clickListener) {
         this.clickListener = clickListener;
     }
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_incomplete_list, parent, false));
@@ -71,7 +73,7 @@ public class completedFormAdapter extends RecyclerView.Adapter<completedFormAdap
 
         @Override
         public void onClick(View v) {
-         //   Toast.makeText(mContext, "Hello Its Working", Toast.LENGTH_SHORT).show();
+            //   Toast.makeText(mContext, "Hello Its Working", Toast.LENGTH_SHORT).show();
 
                 /*Intent intent = new Intent(mContext, CompletedFormsList.class);
                 if (clickListener != null) {
@@ -81,6 +83,6 @@ public class completedFormAdapter extends RecyclerView.Adapter<completedFormAdap
                 intent.putExtra("name",mWomenList.get(getPosition()).getName());
                 }
                 mContext.startActivity(intent);*/
-            }
+        }
     }
 }

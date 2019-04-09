@@ -6,19 +6,19 @@ import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.data.model.UserDetails;
-import tech.foodies.ins_armman.techfoodies.database.DBHelper;
-import tech.foodies.ins_armman.techfoodies.database.DatabaseManager;
-import tech.foodies.ins_armman.techfoodies.utility.utility;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static tech.foodies.ins_armman.techfoodies.utility.Constants.AUTHENTICATION_FAILED;
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.data.model.UserDetails;
+import tech.foodies.app.techfoodies.database.DBHelper;
+import tech.foodies.app.techfoodies.database.DatabaseManager;
+import tech.foodies.app.techfoodies.utility.utility;
+
+import static tech.foodies.app.techfoodies.utility.Constants.AUTHENTICATION_FAILED;
 
 /**
  * @author Aniket & Vivek  Created on 15/8/2018
@@ -109,7 +109,7 @@ public class LoginPresenter implements ILoginPresenter<ILoginview>, LoginInterac
         mUserDetails = new UserDetails();
         mUserDetails.setUserName(username);
         mUserDetails.setPassword(password);
-       // mUserDetails.setImei(utility.getDeviceImeiNumber(iLoginview.getContext()));
+        // mUserDetails.setImei(utility.getDeviceImeiNumber(iLoginview.getContext()));
         mUserDetails.setShowdata("true");
     }
 

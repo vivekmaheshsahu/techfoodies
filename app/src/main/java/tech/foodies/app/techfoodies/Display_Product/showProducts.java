@@ -1,8 +1,8 @@
 package tech.foodies.app.techfoodies.Display_Product;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,12 +11,12 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.data.model.completeFiledForm;
-
 import java.util.List;
 
-public class showProducts extends AppCompatActivity implements IshowProductsView,completedFormAdapter.ClickListener {
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.data.model.completeFiledForm;
+
+public class showProducts extends AppCompatActivity implements IshowProductsView, completedFormAdapter.ClickListener {
 
     IshowProductsPresentation ishowProductsPresentation;
 
@@ -65,7 +65,8 @@ public class showProducts extends AppCompatActivity implements IshowProductsView
             TextView emptyTextView = findViewById(R.id.text_empty_list);
             emptyTextView.setText(R.string.Reg_women_com);
             return;
-        }if(womenList != null) {
+        }
+        if (womenList != null) {
             mcompleteFormAdapter = new completedFormAdapter(getContext(), womenList);
             mRecyclerView.setAdapter(mcompleteFormAdapter);
             mcompleteFormAdapter.setClickListener(this);

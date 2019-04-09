@@ -1,9 +1,10 @@
 package tech.foodies.app.techfoodies.data.model.restoredata;
 
 import com.google.gson.annotations.SerializedName;
-import tech.foodies.ins_armman.techfoodies.data.model.syncing.beneficiaries;
 
 import java.util.ArrayList;
+
+import tech.foodies.app.techfoodies.data.model.syncing.beneficiaries;
 
 /**
  * @author Aniket & Vivek  Created on 4/9/2018

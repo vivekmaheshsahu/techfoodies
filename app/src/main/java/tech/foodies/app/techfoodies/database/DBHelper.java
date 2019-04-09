@@ -5,23 +5,23 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import tech.foodies.ins_armman.techfoodies.utility.utility;
-
 import java.io.File;
 
-import static tech.foodies.ins_armman.techfoodies.database.DatabaseContract.DATABASE_NAME;
-import static tech.foodies.ins_armman.techfoodies.database.DatabaseContract.DATABASE_VERSION;
-import static tech.foodies.ins_armman.techfoodies.database.DatabaseContract.DB_LOCATION;
-import static tech.foodies.ins_armman.techfoodies.database.DatabaseContract.DependentQuestionsTable;
-import static tech.foodies.ins_armman.techfoodies.database.DatabaseContract.FilledFormStatusTable;
-import static tech.foodies.ins_armman.techfoodies.database.DatabaseContract.FormDetailsTable;
-import static tech.foodies.ins_armman.techfoodies.database.DatabaseContract.HashTable;
-import static tech.foodies.ins_armman.techfoodies.database.DatabaseContract.LoginTable;
-import static tech.foodies.ins_armman.techfoodies.database.DatabaseContract.MainQuestionsTable;
-import static tech.foodies.ins_armman.techfoodies.database.DatabaseContract.QuestionAnswerTable;
-import static tech.foodies.ins_armman.techfoodies.database.DatabaseContract.QuestionOptionsTable;
-import static tech.foodies.ins_armman.techfoodies.database.DatabaseContract.RegistrationTable;
-import static tech.foodies.ins_armman.techfoodies.database.DatabaseContract.ValidationsTable;
+import tech.foodies.app.techfoodies.utility.utility;
+
+import static tech.foodies.app.techfoodies.database.DatabaseContract.DATABASE_NAME;
+import static tech.foodies.app.techfoodies.database.DatabaseContract.DATABASE_VERSION;
+import static tech.foodies.app.techfoodies.database.DatabaseContract.DB_LOCATION;
+import static tech.foodies.app.techfoodies.database.DatabaseContract.DependentQuestionsTable;
+import static tech.foodies.app.techfoodies.database.DatabaseContract.FilledFormStatusTable;
+import static tech.foodies.app.techfoodies.database.DatabaseContract.FormDetailsTable;
+import static tech.foodies.app.techfoodies.database.DatabaseContract.HashTable;
+import static tech.foodies.app.techfoodies.database.DatabaseContract.LoginTable;
+import static tech.foodies.app.techfoodies.database.DatabaseContract.MainQuestionsTable;
+import static tech.foodies.app.techfoodies.database.DatabaseContract.QuestionAnswerTable;
+import static tech.foodies.app.techfoodies.database.DatabaseContract.QuestionOptionsTable;
+import static tech.foodies.app.techfoodies.database.DatabaseContract.RegistrationTable;
+import static tech.foodies.app.techfoodies.database.DatabaseContract.ValidationsTable;
 //import static tech.inscripts.ins_armman.techfoodies.database.DatabaseContract.ProductTable;
 
 /**
@@ -51,7 +51,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL(QuestionAnswerTable.CREATE_TABLE);
         db.execSQL(ValidationsTable.CREATE_TABLE);
         db.execSQL(FilledFormStatusTable.CREATE_TABLE);
-     //   db.execSQL(ProductTable.CREAT_TABLE);
+        //   db.execSQL(ProductTable.CREAT_TABLE);
     }
 
     @Override
@@ -109,12 +109,12 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public Cursor getOrderDateListList(String id) {
 
-        return utility.getDatabase().rawQuery("SELECT created_on,unique_id FROM question_answers WHERE form_id = 2 AND unique_id ='"+id+"' group by created_on ", null);
+        return utility.getDatabase().rawQuery("SELECT created_on,unique_id FROM question_answers WHERE form_id = 2 AND unique_id ='" + id + "' group by created_on ", null);
     }
 
-    public Cursor OrderListForm(String unique_id,String createdOn) {
+    public Cursor OrderListForm(String unique_id, String createdOn) {
 
-        return utility.getDatabase().rawQuery("SELECT question_keyword,answer_keyword FROM question_answers WHERE form_id = 2 AND unique_id = '"+ unique_id + "' AND created_on = '"+createdOn+"'", null);
+        return utility.getDatabase().rawQuery("SELECT question_keyword,answer_keyword FROM question_answers WHERE form_id = 2 AND unique_id = '" + unique_id + "' AND created_on = '" + createdOn + "'", null);
     }
 
     public Cursor getuniqueIdFormId(String uniqueId) {
@@ -122,11 +122,11 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     public Cursor getListOfCustomer() {
-        return utility.getDatabase().rawQuery("SELECT * FROM " + RegistrationTable.TABLE_NAME +" ORDER BY id DESC" , null);
+        return utility.getDatabase().rawQuery("SELECT * FROM " + RegistrationTable.TABLE_NAME + " ORDER BY id DESC", null);
     }
 
     public Cursor getListOfQuestion() {
-        return utility.getDatabase().rawQuery("SELECT * FROM " + MainQuestionsTable.TABLE_NAME + " WHERE form_id = 2" , null);
+        return utility.getDatabase().rawQuery("SELECT * FROM " + MainQuestionsTable.TABLE_NAME + " WHERE form_id = 2", null);
     }
 
 }

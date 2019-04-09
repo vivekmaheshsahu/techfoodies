@@ -2,10 +2,10 @@ package tech.foodies.app.techfoodies.Display_Product;
 
 import android.database.Cursor;
 
-import tech.foodies.ins_armman.techfoodies.data.model.completeFiledForm;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import tech.foodies.app.techfoodies.data.model.completeFiledForm;
 
 public class showProductsPresentation implements IshowProductsPresentation<IshowProductsView> {
 
@@ -29,7 +29,7 @@ public class showProductsPresentation implements IshowProductsPresentation<Ishow
         Cursor cursor = showProductsInteractor.fetchListcompleteForm();
         if (cursor != null && cursor.moveToFirst())
             do {
-                womenList.add(new completeFiledForm(cursor.getString(cursor.getColumnIndex("keyword")),cursor.getString(cursor.getColumnIndex("question_id"))));
+                womenList.add(new completeFiledForm(cursor.getString(cursor.getColumnIndex("keyword")), cursor.getString(cursor.getColumnIndex("question_id"))));
             } while (cursor.moveToNext());
 
         ishowProductsView.setAdapter(womenList);

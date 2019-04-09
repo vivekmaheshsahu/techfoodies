@@ -3,7 +3,7 @@ package tech.foodies.app.techfoodies.Question_Answer;
 import android.content.Context;
 import android.database.Cursor;
 
-import tech.foodies.ins_armman.techfoodies.database.DBHelper;
+import tech.foodies.app.techfoodies.database.DBHelper;
 
 public class place_order_interactor implements Iplace_order_interactor {
 

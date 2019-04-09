@@ -12,13 +12,12 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.inscripts.ins_armman.techfoodies.R;
-
-import tech.foodies.app.techfoodies.data.model.all_order_model;
-
 import java.util.List;
 
-public class all_order_date_display extends AppCompatActivity implements Iall_order_view,OrderFormAdapter.ClickListener  {
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.data.model.all_order_model;
+
+public class all_order_date_display extends AppCompatActivity implements Iall_order_view, OrderFormAdapter.ClickListener {
 
     all_order_date_display_presenter iall_order_presenter;
     ProgressBar mProgressBar;
@@ -69,7 +68,8 @@ public class all_order_date_display extends AppCompatActivity implements Iall_or
             TextView emptyTextView = findViewById(R.id.text_empty_list);
             emptyTextView.setText(R.string.Reg_women_com);
             return;
-        }if(womenList != null) {
+        }
+        if (womenList != null) {
             mcompleteFormAdapter = new OrderFormAdapter(getContext(), womenList);
             mRecyclerView.setAdapter(mcompleteFormAdapter);
             mcompleteFormAdapter.setClickListener(this);

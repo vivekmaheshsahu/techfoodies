@@ -2,10 +2,10 @@ package tech.foodies.app.techfoodies.all_order_date_display;
 
 import android.database.Cursor;
 
-import tech.foodies.ins_armman.techfoodies.data.model.all_order_model;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import tech.foodies.app.techfoodies.data.model.all_order_model;
 
 public class all_order_date_display_presenter implements Iall_order_presenter<Iall_order_view> {
 
@@ -29,7 +29,7 @@ public class all_order_date_display_presenter implements Iall_order_presenter<Ia
         Cursor cursor = all_order_inter.fetchDetails(unique_id);
         if (cursor != null && cursor.moveToFirst())
             do {
-                womenList.add(new all_order_model(cursor.getString(cursor.getColumnIndex("created_on")),cursor.getString(cursor.getColumnIndex("unique_id")),""));
+                womenList.add(new all_order_model(cursor.getString(cursor.getColumnIndex("created_on")), cursor.getString(cursor.getColumnIndex("unique_id")), ""));
             } while (cursor.moveToNext());
 
         iall_order_view.setAdapter(womenList);

@@ -8,17 +8,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.inscripts.ins_armman.techfoodies.R;
-
-import tech.foodies.app.techfoodies.data.model.all_order_model;
-
 import java.util.List;
+
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.data.model.all_order_model;
 
 
 public class Details_orderFormAdapter extends RecyclerView.Adapter<Details_orderFormAdapter.ViewHolder> {
 
     private Context mContext;
-  private ClickListener clickListener;
+    private ClickListener clickListener;
     private List<all_order_model> mWomenList;
 
     public Details_orderFormAdapter(Context mContext, List<all_order_model> womenList) {
@@ -26,9 +25,11 @@ public class Details_orderFormAdapter extends RecyclerView.Adapter<Details_order
         this.mWomenList = womenList;
 
     }
+
     public void setClickListener(ClickListener clickListener) {
         this.clickListener = clickListener;
     }
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_incomplete_list, parent, false));
@@ -67,7 +68,7 @@ public class Details_orderFormAdapter extends RecyclerView.Adapter<Details_order
 
         private void bindData(final all_order_model listModel) {
             if (listModel != null) {
-                textViewName.setText(""+listModel.getSname()+"\t:\t"+listModel.getName());
+                textViewName.setText("" + listModel.getSname() + "\t:\t" + listModel.getName());
             }
         }
 
@@ -81,6 +82,6 @@ public class Details_orderFormAdapter extends RecyclerView.Adapter<Details_order
                 intent.putExtra("name",mWomenList.get(getPosition()).getName());
                 }
                 mContext.startActivity(intent);*/
-            }
+        }
     }
 }

@@ -2,13 +2,12 @@ package tech.foodies.app.techfoodies.data.service;
 
 import android.content.Context;
 
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.data.model.UpdateModel;
-import tech.foodies.ins_armman.techfoodies.settingActivity.ISettingInteractor;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.data.model.UpdateModel;
+import tech.foodies.app.techfoodies.settingActivity.ISettingInteractor;
 
 /**
  * @author Aniket & Vivek  Created on 4/9/2018

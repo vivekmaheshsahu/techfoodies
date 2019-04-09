@@ -2,10 +2,6 @@ package tech.foodies.app.techfoodies.data.service;
 
 import android.content.Context;
 
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.data.model.syncing.FormDetails;
-import tech.foodies.ins_armman.techfoodies.mainMenu.IMainInteractor;
-
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -15,6 +11,9 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.data.model.syncing.FormDetails;
+import tech.foodies.app.techfoodies.mainMenu.IMainInteractor;
 
 /**
  * @author Aniket & Vivek  Created on 4/9/2018

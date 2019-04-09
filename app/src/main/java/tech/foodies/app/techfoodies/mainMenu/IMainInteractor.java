@@ -2,11 +2,11 @@ package tech.foodies.app.techfoodies.mainMenu;
 
 import android.database.Cursor;
 
-import tech.foodies.ins_armman.techfoodies.data.model.SyncRegistrationDetails;
-import tech.foodies.ins_armman.techfoodies.data.model.syncing.FormDetails;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
+
+import tech.foodies.app.techfoodies.data.model.SyncRegistrationDetails;
+import tech.foodies.app.techfoodies.data.model.syncing.FormDetails;
 
 /**
  * @author Aniket & Vivek  Created on 15/8/2018

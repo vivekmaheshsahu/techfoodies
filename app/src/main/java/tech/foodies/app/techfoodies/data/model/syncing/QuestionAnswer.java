@@ -2,9 +2,9 @@ package tech.foodies.app.techfoodies.data.model.syncing;
 
 import com.google.gson.annotations.SerializedName;
 
-import static tech.foodies.ins_armman.techfoodies.utility.Constants.ANSWER;
-import static tech.foodies.ins_armman.techfoodies.utility.Constants.CREATED_ON;
-import static tech.foodies.ins_armman.techfoodies.utility.Constants.QUESTION_KEYWORD;
+import static tech.foodies.app.techfoodies.utility.Constants.ANSWER;
+import static tech.foodies.app.techfoodies.utility.Constants.CREATED_ON;
+import static tech.foodies.app.techfoodies.utility.Constants.QUESTION_KEYWORD;
 
 /**
  * @author Aniket & Vivek  Created on 4/9/2018

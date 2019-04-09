@@ -1,22 +1,21 @@
 package tech.foodies.app.techfoodies.data.retrofit;
 
 
-import tech.foodies.ins_armman.techfoodies.data.service.AuthService;
-import tech.foodies.ins_armman.techfoodies.data.service.CheckUpdateApi;
-import tech.foodies.ins_armman.techfoodies.data.service.CheckUpdateService;
-import tech.foodies.ins_armman.techfoodies.data.service.FormDownloadService;
-import tech.foodies.ins_armman.techfoodies.data.service.FormDownloadServiceAPI;
-import tech.foodies.ins_armman.techfoodies.data.service.LoginServiceAPI;
-import tech.foodies.ins_armman.techfoodies.data.service.RestoreRegistrationService;
-import tech.foodies.ins_armman.techfoodies.data.service.RestoreRegistrationServiceAPI;
-import tech.foodies.ins_armman.techfoodies.data.service.RestoreVisitsService;
-import tech.foodies.ins_armman.techfoodies.data.service.RestoreVisitsServiceAPI;
-import tech.foodies.ins_armman.techfoodies.data.service.SyncFormService;
-import tech.foodies.ins_armman.techfoodies.data.service.SyncFormServiceApi;
-import tech.foodies.ins_armman.techfoodies.data.service.SyncRegistrationService;
-import tech.foodies.ins_armman.techfoodies.data.service.SyncRegistrationServiceApi;
-
 import retrofit2.Retrofit;
+import tech.foodies.app.techfoodies.data.service.AuthService;
+import tech.foodies.app.techfoodies.data.service.CheckUpdateApi;
+import tech.foodies.app.techfoodies.data.service.CheckUpdateService;
+import tech.foodies.app.techfoodies.data.service.FormDownloadService;
+import tech.foodies.app.techfoodies.data.service.FormDownloadServiceAPI;
+import tech.foodies.app.techfoodies.data.service.LoginServiceAPI;
+import tech.foodies.app.techfoodies.data.service.RestoreRegistrationService;
+import tech.foodies.app.techfoodies.data.service.RestoreRegistrationServiceAPI;
+import tech.foodies.app.techfoodies.data.service.RestoreVisitsService;
+import tech.foodies.app.techfoodies.data.service.RestoreVisitsServiceAPI;
+import tech.foodies.app.techfoodies.data.service.SyncFormService;
+import tech.foodies.app.techfoodies.data.service.SyncFormServiceApi;
+import tech.foodies.app.techfoodies.data.service.SyncRegistrationService;
+import tech.foodies.app.techfoodies.data.service.SyncRegistrationServiceApi;
 
 
 /**

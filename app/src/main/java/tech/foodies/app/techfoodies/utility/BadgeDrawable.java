@@ -11,7 +11,8 @@ import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 
-import com.inscripts.app.techfoodies.R;
+import tech.foodies.app.techfoodies.R;
+
 
 /**
  * BadgeDrawable is used to draw of display the notification of remaining to sync entry

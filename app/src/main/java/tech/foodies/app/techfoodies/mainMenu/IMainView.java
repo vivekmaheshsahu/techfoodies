@@ -1,6 +1,6 @@
 package tech.foodies.app.techfoodies.mainMenu;
 
-import tech.foodies.ins_armman.techfoodies.utility.IMvpView;
+import tech.foodies.app.techfoodies.utility.IMvpView;
 
 /**
  * @author Aniket & Vivek  Created on 15/8/2018

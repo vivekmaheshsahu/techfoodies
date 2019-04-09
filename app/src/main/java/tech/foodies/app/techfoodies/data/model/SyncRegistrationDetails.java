@@ -1,11 +1,12 @@
 package tech.foodies.app.techfoodies.data.model;
 
 import com.google.gson.annotations.SerializedName;
-import tech.foodies.ins_armman.techfoodies.data.model.syncing.beneficiaries;
 
 import java.util.ArrayList;
 
-import static tech.foodies.ins_armman.techfoodies.utility.Constants.BENEFICIARIES;
+import tech.foodies.app.techfoodies.data.model.syncing.beneficiaries;
+
+import static tech.foodies.app.techfoodies.utility.Constants.BENEFICIARIES;
 
 /**
  * @author Aniket & Vivek  Created on 4/9/2018

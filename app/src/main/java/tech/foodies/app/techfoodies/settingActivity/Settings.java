@@ -6,8 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.inscripts.ins_armman.techfoodies.R;
-
+import tech.foodies.app.techfoodies.R;
 import tech.foodies.app.techfoodies.mainMenu.MainActivity;
 
 /**
@@ -33,8 +32,7 @@ public class Settings extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId())
-        {
+        switch (item.getItemId()) {
             case android.R.id.home:
                 Intent intent = new Intent(Settings.this, MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -49,7 +47,7 @@ public class Settings extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent1 = new Intent(Settings.this,MainActivity.class);
+        Intent intent1 = new Intent(Settings.this, MainActivity.class);
         startActivity(intent1);
     }
 }

@@ -15,16 +15,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import tech.foodies.ins_armman.techfoodies.Display_Product.showProducts;
-import tech.foodies.ins_armman.techfoodies.Question_Answer.place_order;
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.all_order.all_order;
-import tech.foodies.ins_armman.techfoodies.registration.EnrollmentQuestions;
-import tech.foodies.ins_armman.techfoodies.settingActivity.Settings;
-import tech.foodies.ins_armman.techfoodies.utility.utility;
+import tech.foodies.app.techfoodies.Display_Product.showProducts;
+import tech.foodies.app.techfoodies.Question_Answer.place_order;
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.all_order.all_order;
+import tech.foodies.app.techfoodies.registration.EnrollmentQuestions;
+import tech.foodies.app.techfoodies.settingActivity.Settings;
+import tech.foodies.app.techfoodies.utility.utility;
 
 /**
  * Main screen of the project which contain different menu of different functionality
+ *
  * @author Aniket & Vivek  Created on 15/8/2018
  */
 
@@ -102,14 +103,14 @@ public class MainActivity extends AppCompatActivity implements IMainView, View.O
                 finish();
                 break;
             case R.id.card2:
-                Intent intent2 = new Intent(MainActivity.this,place_order.class);
+                Intent intent2 = new Intent(MainActivity.this, place_order.class);
                 startActivity(intent2);
                 finish();
                 break;
 
             case R.id.card3:
-                 Intent intent3 = new Intent(MainActivity.this, showProducts.class);
-                  startActivity(intent3);
+                Intent intent3 = new Intent(MainActivity.this, showProducts.class);
+                startActivity(intent3);
 
                 break;
 

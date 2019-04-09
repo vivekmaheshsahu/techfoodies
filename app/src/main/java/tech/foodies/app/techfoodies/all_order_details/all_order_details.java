@@ -2,8 +2,8 @@ package tech.foodies.app.techfoodies.all_order_details;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,14 +12,12 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-
-import com.inscripts.ins_armman.techfoodies.R;
-
-import tech.foodies.app.techfoodies.data.model.all_order_model;
-
 import java.util.List;
 
-public class all_order_details extends AppCompatActivity implements Iall_order_details_view,Details_orderFormAdapter.ClickListener  {
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.data.model.all_order_model;
+
+public class all_order_details extends AppCompatActivity implements Iall_order_details_view, Details_orderFormAdapter.ClickListener {
 
     Iall_order_details_presenter iall_order_presenter;
     ProgressBar mProgressBar;
@@ -48,7 +46,7 @@ public class all_order_details extends AppCompatActivity implements Iall_order_d
 
         String unique_id = intent.getStringExtra("id");
         String created = intent.getStringExtra("createdOn");
-        iall_order_presenter.getListCompleteForm(unique_id,created);
+        iall_order_presenter.getListCompleteForm(unique_id, created);
 
     }
 
@@ -66,7 +64,8 @@ public class all_order_details extends AppCompatActivity implements Iall_order_d
             TextView emptyTextView = findViewById(R.id.text_empty_list);
             emptyTextView.setText(R.string.Reg_women_com);
             return;
-        }if(mWomenList != null) {
+        }
+        if (mWomenList != null) {
             mcompleteFormAdapter = new Details_orderFormAdapter(getContext(), mWomenList);
             mRecyclerView.setAdapter(mcompleteFormAdapter);
             mcompleteFormAdapter.setClickListener(this);
@@ -77,7 +76,8 @@ public class all_order_details extends AppCompatActivity implements Iall_order_d
     }
 
     @Override
-    public void itemClicked(View view, int position) {}
+    public void itemClicked(View view, int position) {
+    }
 
     @Override
     protected void onResume() {

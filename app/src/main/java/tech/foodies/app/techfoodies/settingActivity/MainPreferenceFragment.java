@@ -14,7 +14,8 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.inscripts.ins_armman.techfoodies.R;
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.utility.utility;
 
 /**
  * MainPreferenceFragment this class is used to display setting menu and handle it onclick also
@@ -66,7 +67,7 @@ public class MainPreferenceFragment extends PreferenceFragment implements ISetti
         mPreferenceCheckUpdate.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-             //   mSettingsPresentor.checkUpdate();
+                //   mSettingsPresentor.checkUpdate();
                 return false;
             }
         });

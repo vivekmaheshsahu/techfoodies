@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
-import tech.foodies.ins_armman.techfoodies.utility.Constants;
+import tech.foodies.app.techfoodies.utility.Constants;
 
 /**
  * @author Aniket & Vivek  Created on 4/9/2018

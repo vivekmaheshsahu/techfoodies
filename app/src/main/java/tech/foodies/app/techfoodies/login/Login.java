@@ -15,9 +15,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import tech.foodies.ins_armman.techfoodies.mainMenu.MainActivity;
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.utility.utility;
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.mainMenu.MainActivity;
+import tech.foodies.app.techfoodies.utility.utility;
 
 /**
  * Login process will be follow and store data from api
@@ -140,8 +140,8 @@ public class Login extends AppCompatActivity implements ILoginview {
 
     @Override
     public void openHomeActivity() {
-          startActivity(new Intent(Login.this, MainActivity.class));
-          finish();
+        startActivity(new Intent(Login.this, MainActivity.class));
+        finish();
     }
 
     @Override
