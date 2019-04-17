@@ -99,7 +99,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     public Cursor getcompleteFormListList() {
 
-        return utility.getDatabase().rawQuery("SELECT question_id,keyword from main_questions WHERE form_id = 2", null);
+        return utility.getDatabase().rawQuery("SELECT question_label,question_id from main_questions WHERE form_id = 2", null);
     }
 
     public Cursor getRegistrationFormListList() {

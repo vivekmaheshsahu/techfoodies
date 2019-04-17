@@ -82,7 +82,7 @@ public class MainPreferenceFragment extends PreferenceFragment implements ISetti
             }
         });
 
-      /*  mPreferenceRestoreData = findPreference("restore_data");
+        mPreferenceRestoreData = findPreference("restore_data");
         mPreferenceRestoreData.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
@@ -106,7 +106,7 @@ public class MainPreferenceFragment extends PreferenceFragment implements ISetti
 
                 return false;
             }
-        });*/
+        });
 
         mPreferenceVersion = findPreference("version");
         mPreferenceVersion.setSummary(utility.getAppVersionName(getActivity()));

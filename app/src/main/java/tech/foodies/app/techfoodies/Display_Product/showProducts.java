@@ -33,7 +33,7 @@ public class showProducts extends AppCompatActivity implements IshowProductsView
         setTitle("Product List");
         mProgressBar = findViewById(R.id.child_list_progress_bar);
         emptyLayout = findViewById(R.id.empty_layout);
-        mRecyclerView = findViewById(R.id.recycler_view);
+        mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(showProducts.this);
         RecyclerView.ItemDecoration itemDecoration = new DividerItemDecoration(this, DividerItemDecoration.VERTICAL);

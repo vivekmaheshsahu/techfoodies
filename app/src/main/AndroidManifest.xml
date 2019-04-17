@@ -34,6 +34,8 @@
         <activity android:name=".registration.EnrollmentQuestions"/>
         <activity android:name=".Question_Answer.place_order">
         </activity>
+        <activity android:name=".Display_Product.showProducts"/>
+        <activity android:name=".all_order.all_order"/>
     </application>
 
 </manifest>

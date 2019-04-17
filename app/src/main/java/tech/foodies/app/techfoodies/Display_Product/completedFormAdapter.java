@@ -67,7 +67,12 @@ public class completedFormAdapter extends RecyclerView.Adapter<completedFormAdap
 
         private void bindData(final completeFiledForm listModel) {
             if (listModel != null) {
-                textViewName.setText(listModel.getName());
+                String data = listModel.getName();
+//                JsonParser parser = new JsonParser();
+//                JsonObject jsonObject = (JsonObject) parser.parse(data);
+//                String  fetch_data = jsonObject.getAsString();
+                textViewName.setText(data);
+
             }
         }
 

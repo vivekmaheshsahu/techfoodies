@@ -22,7 +22,7 @@
     <dimen name="enr_small_padding">2dp</dimen>
     <dimen name="text_size_large">10sp</dimen>
     <dimen name="enr_large_margin">10dp</dimen>
-    <dimen name="text_size_xx_large">15sp</dimen>
+    <dimen name="text_size_xx_large">22sp</dimen>
     <dimen name="enr_normal_padding">5dp</dimen>
     <dimen name="enr_large_padding">8dp</dimen>
     <dimen name="questions_top_bottom_margin">-6dp</dimen>

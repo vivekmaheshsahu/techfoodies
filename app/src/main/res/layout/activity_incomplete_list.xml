@@ -18,8 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_vertical|center_horizontal"
-            android:textColor="@color/color_dark_gray"
-            android:textSize="@dimen/text_size_large"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_size_xx_large"
             tools:text="@tools:sample/full_names" />
     </android.support.v7.widget.CardView>
 

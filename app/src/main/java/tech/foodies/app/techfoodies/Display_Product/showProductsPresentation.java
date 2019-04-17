@@ -29,7 +29,7 @@ public class showProductsPresentation implements IshowProductsPresentation<Ishow
         Cursor cursor = showProductsInteractor.fetchListcompleteForm();
         if (cursor != null && cursor.moveToFirst())
             do {
-                womenList.add(new completeFiledForm(cursor.getString(cursor.getColumnIndex("keyword")), cursor.getString(cursor.getColumnIndex("question_id"))));
+                womenList.add(new completeFiledForm(cursor.getString(cursor.getColumnIndex("question_label")), cursor.getString(cursor.getColumnIndex("question_id"))));
             } while (cursor.moveToNext());
 
         ishowProductsView.setAdapter(womenList);
