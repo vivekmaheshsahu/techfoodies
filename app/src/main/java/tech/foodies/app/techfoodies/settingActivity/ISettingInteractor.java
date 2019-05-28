@@ -1,14 +1,14 @@
-package tech.foodies.ins_armman.techfoodies.settingActivity;
+package tech.foodies.app.techfoodies.settingActivity;
 
 import android.content.Context;
 
-import tech.foodies.ins_armman.techfoodies.data.model.RequestFormModel;
-import tech.foodies.ins_armman.techfoodies.data.model.UpdateModel;
-import tech.foodies.ins_armman.techfoodies.data.model.restoredata.BeneficiariesList;
-import tech.foodies.ins_armman.techfoodies.data.model.restoredata.RestoreDataRequest;
-import tech.foodies.ins_armman.techfoodies.data.model.restoredata.RestoreRegistration;
-import tech.foodies.ins_armman.techfoodies.data.model.restoredata.RestoreVisits;
-import tech.foodies.ins_armman.techfoodies.data.model.syncing.beneficiaries;
+import tech.foodies.app.techfoodies.data.model.RequestFormModel;
+import tech.foodies.app.techfoodies.data.model.UpdateModel;
+import tech.foodies.app.techfoodies.data.model.restoredata.BeneficiariesList;
+import tech.foodies.app.techfoodies.data.model.restoredata.RestoreDataRequest;
+import tech.foodies.app.techfoodies.data.model.restoredata.RestoreRegistration;
+import tech.foodies.app.techfoodies.data.model.restoredata.RestoreVisits;
+import tech.foodies.app.techfoodies.data.model.syncing.beneficiaries;
 
 import org.json.JSONObject;
 

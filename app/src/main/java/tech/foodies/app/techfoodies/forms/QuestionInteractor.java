@@ -1,13 +1,9 @@
-package tech.foodies.ins_armman.techfoodies.forms;
+package tech.foodies.app.techfoodies.forms;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.widget.LinearLayout;
-
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.database.DatabaseContract;
-import tech.foodies.ins_armman.techfoodies.utility.utility;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -18,8 +14,12 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
-import static tech.foodies.ins_armman.techfoodies.utility.Keywords.AROGYASAKHI_MOB;
-import static tech.foodies.ins_armman.techfoodies.utility.Keywords.AROGYASAKHI_NAME;
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.database.DatabaseContract;
+import tech.foodies.app.techfoodies.utility.utility;
+
+import static tech.foodies.app.techfoodies.utility.Keywords.AROGYASAKHI_MOB;
+import static tech.foodies.app.techfoodies.utility.Keywords.AROGYASAKHI_NAME;
 
 /**
  * @author Aniket & Vivek  Created on 4/9/2018
@@ -33,6 +33,17 @@ public class QuestionInteractor {
         this.mContext = mContext;
     }
 
+    public static String getCheckItemSelectedOption(String keyword) {
+        Cursor cursor = utility.getDatabase().rawQuery("SELECT " + DatabaseContract.DependentQuestionsTable.COLUMN_FORM_ID + " FROM "
+                + DatabaseContract.DependentQuestionsTable.TABLE_NAME
+                + " WHERE "
+                + DatabaseContract.DependentQuestionsTable.COLUMN_MAIN_QUESTION_OPTION_KEYWORD + " = ? ", new String[]{keyword});
+
+        if (cursor.moveToFirst())
+            return cursor.getString(cursor.getColumnIndex(DatabaseContract.QuestionOptionsTable.COLUMN_FORM_ID));
+        else return null;
+    }
+
     public String saveRegistrationDetails(String firstName, String address, String s_name,
                                           String mobileNo, String state, String city, String zone, int registrationStatus) {
         ContentValues values = new ContentValues();
@@ -42,11 +53,11 @@ public class QuestionInteractor {
         values.put(DatabaseContract.RegistrationTable.COLUMN_UNIQUE_ID, woman_id);
         values.put(DatabaseContract.RegistrationTable.COLUMN_FIRST_NAME, firstName);
         values.put(DatabaseContract.RegistrationTable.COLUMN_ADDRESS, address);
-        values.put(DatabaseContract.RegistrationTable.COLUMN_SNAME,s_name);
+        values.put(DatabaseContract.RegistrationTable.COLUMN_SNAME, s_name);
         values.put(DatabaseContract.RegistrationTable.COLUMN_MOBILE_NO, mobileNo);
-        values.put(DatabaseContract.RegistrationTable.COLUMN_STATE,state);
-        values.put(DatabaseContract.RegistrationTable.COLUMN_CITY,city);
-        values.put(DatabaseContract.RegistrationTable.COLUMN_ZONE,zone);
+        values.put(DatabaseContract.RegistrationTable.COLUMN_STATE, state);
+        values.put(DatabaseContract.RegistrationTable.COLUMN_CITY, city);
+        values.put(DatabaseContract.RegistrationTable.COLUMN_ZONE, zone);
         values.put(DatabaseContract.RegistrationTable.COLUMN_REGISTRATION_STATUS, registrationStatus);
         values.put(DatabaseContract.RegistrationTable.COLUMN_CREATED_ON, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.US).format(new Date()));
 
@@ -211,7 +222,6 @@ public class QuestionInteractor {
         return dependentQuestionsList;
     }
 
-
     public List<Visit> removeDependantQuesList(String selectedOptionKeyword, String formId, LinearLayout ll_sub, String parentQstnKeyword, String pageScrollId) {
 
         List<Visit> removedependentQuestionsList = new ArrayList<Visit>();
@@ -249,7 +259,6 @@ public class QuestionInteractor {
 
         return removedependentQuestionsList;
     }
-
 
     public String getHighRiskCondition(String optionKeyword) {
         Cursor cursor = utility.getDatabase().rawQuery("SELECT "
@@ -368,22 +377,6 @@ public class QuestionInteractor {
         else return -1;
     }
 
-    public HashMap<String, String> getFormFilledData(String uniqueId, int formId) {
-        HashMap<String, String> hashMap = new HashMap<>();
-        Cursor cursor = utility.getDatabase().rawQuery("SELECT * FROM "
-                + DatabaseContract.QuestionAnswerTable.TABLE_NAME
-                + " WHERE "
-                + DatabaseContract.QuestionAnswerTable.COLUMN_UNIQUE_ID + " = ? "
-                + " AND "
-                + DatabaseContract.QuestionAnswerTable.COLUMN_FORM_ID + " = ? ", new String[]{uniqueId, String.valueOf(formId)});
-
-        while (cursor.moveToNext()) {
-            hashMap.put(cursor.getString(cursor.getColumnIndex(DatabaseContract.QuestionAnswerTable.COLUMN_QUESTION_KEYWORD))
-                    , cursor.getString(cursor.getColumnIndex(DatabaseContract.QuestionAnswerTable.COLUMN_ANSWER_KEYWORD)));
-        }
-        return hashMap;
-    }
-
 //    public CalculateVisit getNextVisitOf(String formId) {
 //        switch (Integer.valueOf(formId)){
 //            case ANC_SIX_VISIT_ID:
@@ -426,6 +419,22 @@ public class QuestionInteractor {
 //                , new String[]{formId});
 //    }
 
+    public HashMap<String, String> getFormFilledData(String uniqueId, int formId) {
+        HashMap<String, String> hashMap = new HashMap<>();
+        Cursor cursor = utility.getDatabase().rawQuery("SELECT * FROM "
+                + DatabaseContract.QuestionAnswerTable.TABLE_NAME
+                + " WHERE "
+                + DatabaseContract.QuestionAnswerTable.COLUMN_UNIQUE_ID + " = ? "
+                + " AND "
+                + DatabaseContract.QuestionAnswerTable.COLUMN_FORM_ID + " = ? ", new String[]{uniqueId, String.valueOf(formId)});
+
+        while (cursor.moveToNext()) {
+            hashMap.put(cursor.getString(cursor.getColumnIndex(DatabaseContract.QuestionAnswerTable.COLUMN_QUESTION_KEYWORD))
+                    , cursor.getString(cursor.getColumnIndex(DatabaseContract.QuestionAnswerTable.COLUMN_ANSWER_KEYWORD)));
+        }
+        return hashMap;
+    }
+
     public String getSelectedOptionText(String keyword) {
         Cursor cursor = utility.getDatabase().rawQuery("SELECT * FROM "
                 + DatabaseContract.QuestionOptionsTable.TABLE_NAME
@@ -452,17 +461,6 @@ public class QuestionInteractor {
         return wordList;
     }
 
-    public void updateClosureDetails(String uniqueId, String closeDate, String closeReason, String deathDate, String deathReason) {
-        ContentValues values = new ContentValues();
-//        values.put(RegistrationTable.COLUMN_CLOSE_STATUS, 1);
-//
-//        utility.getDatabase().update(RegistrationTable.TABLE_NAME
-//                , values
-//                , RegistrationTable.COLUMN_UNIQUE_ID + " = ? "
-//                , new String[]{uniqueId});
-
-    }
-
 //    public void updateChildRegistrationDetails(String uniqueId, String firstName, String middleName, String lastName, String gender) {
 //        ContentValues values = new ContentValues();
 //        values.put(DatabaseContract.RegistrationTable.COLUMN_FIRST_NAME, firstName);
@@ -475,6 +473,17 @@ public class QuestionInteractor {
 //                , new String[]{uniqueId});
 //
 //    }
+
+    public void updateClosureDetails(String uniqueId, String closeDate, String closeReason, String deathDate, String deathReason) {
+        ContentValues values = new ContentValues();
+//        values.put(RegistrationTable.COLUMN_CLOSE_STATUS, 1);
+//
+//        utility.getDatabase().update(RegistrationTable.TABLE_NAME
+//                , values
+//                , RegistrationTable.COLUMN_UNIQUE_ID + " = ? "
+//                , new String[]{uniqueId});
+
+    }
 
     public String getDob(String uniqueId) {
         Cursor cursor = utility.getDatabase().rawQuery("SELECT * "
@@ -525,21 +534,9 @@ public class QuestionInteractor {
         else return null;
     }
 
-    public static String getCheckItemSelectedOption(String keyword) {
-        Cursor cursor = utility.getDatabase().rawQuery("SELECT " + DatabaseContract.DependentQuestionsTable.COLUMN_FORM_ID + " FROM "
-                + DatabaseContract.DependentQuestionsTable.TABLE_NAME
-                + " WHERE "
-                + DatabaseContract.DependentQuestionsTable.COLUMN_MAIN_QUESTION_OPTION_KEYWORD + " = ? ", new String[]{keyword});
-
-        if (cursor.moveToFirst())
-            return cursor.getString(cursor.getColumnIndex(DatabaseContract.QuestionOptionsTable.COLUMN_FORM_ID));
-        else return null;
-    }
-
-    public void deleteExisitingChild(String uniqueId)
-    {
-      Cursor cursor = utility.getDatabase().rawQuery("DELETE FROM registration WHERE mother_id = '"+uniqueId+"'", null);
-            cursor.getCount();
+    public void deleteExisitingChild(String uniqueId) {
+        Cursor cursor = utility.getDatabase().rawQuery("DELETE FROM registration WHERE mother_id = '" + uniqueId + "'", null);
+        cursor.getCount();
     }
 
 }

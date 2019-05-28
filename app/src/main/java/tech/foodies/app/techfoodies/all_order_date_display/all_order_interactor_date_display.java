@@ -1,18 +1,17 @@
-package tech.foodies.ins_armman.techfoodies.all_order_date_display;
+package tech.foodies.app.techfoodies.all_order_date_display;
 
 
 import android.content.Context;
 import android.database.Cursor;
 
-import tech.foodies.ins_armman.techfoodies.database.DBHelper;
+import tech.foodies.app.techfoodies.database.DBHelper;
 
 public class all_order_interactor_date_display implements Iall_order_interactor {
 
     DBHelper dbHelper;
     Context context;
 
-    all_order_interactor_date_display(Context context1)
-    {
+    all_order_interactor_date_display(Context context1) {
         dbHelper = new DBHelper(context1);
         this.context = context1;
     }

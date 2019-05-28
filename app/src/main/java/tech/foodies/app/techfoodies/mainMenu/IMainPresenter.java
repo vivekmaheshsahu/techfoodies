@@ -1,8 +1,8 @@
-package tech.foodies.ins_armman.techfoodies.mainMenu;
+package tech.foodies.app.techfoodies.mainMenu;
 
 import android.database.Cursor;
 
-import tech.foodies.ins_armman.techfoodies.utility.IBasePresenter;
+import tech.foodies.app.techfoodies.utility.IBasePresenter;
 
 /**
  * @author Aniket & Vivek  Created on 15/8/2018

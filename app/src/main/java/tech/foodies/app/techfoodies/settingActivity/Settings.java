@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.settingActivity;
+package tech.foodies.app.techfoodies.settingActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.mainMenu.MainActivity;
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.mainMenu.MainActivity;
 
 /**
  * Setting this class is used to deal with setting fragment is used for easy code and less coding is required then normal coding standard
@@ -32,10 +32,9 @@ public class Settings extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId())
-        {
+        switch (item.getItemId()) {
             case android.R.id.home:
-                Intent intent = new Intent(Settings.this,MainActivity.class);
+                Intent intent = new Intent(Settings.this, MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 finish();
@@ -48,7 +47,7 @@ public class Settings extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent1 = new Intent(Settings.this,MainActivity.class);
+        Intent intent1 = new Intent(Settings.this, MainActivity.class);
         startActivity(intent1);
     }
 }

@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.settingActivity;
+package tech.foodies.app.techfoodies.settingActivity;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -14,8 +14,8 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.utility.utility;
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.utility.utility;
 
 /**
  * MainPreferenceFragment this class is used to display setting menu and handle it onclick also
@@ -67,7 +67,7 @@ public class MainPreferenceFragment extends PreferenceFragment implements ISetti
         mPreferenceCheckUpdate.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-             //   mSettingsPresentor.checkUpdate();
+                //   mSettingsPresentor.checkUpdate();
                 return false;
             }
         });
@@ -82,7 +82,7 @@ public class MainPreferenceFragment extends PreferenceFragment implements ISetti
             }
         });
 
-      /*  mPreferenceRestoreData = findPreference("restore_data");
+        mPreferenceRestoreData = findPreference("restore_data");
         mPreferenceRestoreData.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
@@ -106,7 +106,7 @@ public class MainPreferenceFragment extends PreferenceFragment implements ISetti
 
                 return false;
             }
-        });*/
+        });
 
         mPreferenceVersion = findPreference("version");
         mPreferenceVersion.setSummary(utility.getAppVersionName(getActivity()));

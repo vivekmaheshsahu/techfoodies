@@ -1,7 +1,8 @@
-package tech.foodies.ins_armman.techfoodies.login;
+package tech.foodies.app.techfoodies.login;
 
-import tech.foodies.ins_armman.techfoodies.utility.IBasePresenter;
 import java.util.List;
+
+import tech.foodies.app.techfoodies.utility.IBasePresenter;
 
 /**
  * @author Aniket & Vivek  Created on 15/8/2018

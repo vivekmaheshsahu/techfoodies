@@ -1,6 +1,6 @@
-package tech.foodies.ins_armman.techfoodies.settingActivity;
+package tech.foodies.app.techfoodies.settingActivity;
 
-import tech.foodies.ins_armman.techfoodies.utility.IMvpView;
+import tech.foodies.app.techfoodies.utility.IMvpView;
 
 
 /**

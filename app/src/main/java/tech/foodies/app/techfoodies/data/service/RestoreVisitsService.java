@@ -1,17 +1,16 @@
-package tech.foodies.ins_armman.techfoodies.data.service;
+package tech.foodies.app.techfoodies.data.service;
 
 import android.content.Context;
-
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.data.model.restoredata.RestoreDataRequest;
-import tech.foodies.ins_armman.techfoodies.data.model.restoredata.RestoreVisits;
-import tech.foodies.ins_armman.techfoodies.settingActivity.ISettingInteractor;
 
 import java.io.IOException;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.data.model.restoredata.RestoreDataRequest;
+import tech.foodies.app.techfoodies.data.model.restoredata.RestoreVisits;
+import tech.foodies.app.techfoodies.settingActivity.ISettingInteractor;
 
 /**
  * @author Aniket & Vivek  Created on 4/9/2018

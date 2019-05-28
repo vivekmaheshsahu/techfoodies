@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.database;
+package tech.foodies.app.techfoodies.database;
 
 
 import android.content.ContentValues;
@@ -8,10 +8,10 @@ import android.database.sqlite.SQLiteException;
 import android.os.Bundle;
 import android.util.Log;
 
-import tech.foodies.ins_armman.techfoodies.utility.Constants;
-import tech.foodies.ins_armman.techfoodies.utility.utility;
-
 import java.util.Arrays;
+
+import tech.foodies.app.techfoodies.utility.Constants;
+import tech.foodies.app.techfoodies.utility.utility;
 
 /**
  * @author Aniket & Vivek  Created on 4/9/2018

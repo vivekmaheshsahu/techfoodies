@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.all_order_date_display;
+package tech.foodies.app.techfoodies.all_order_date_display;
 
 import android.database.Cursor;
 

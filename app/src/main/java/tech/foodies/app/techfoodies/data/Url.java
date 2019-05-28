@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.data;
+package tech.foodies.app.techfoodies.data;
 
 /**
  * @author Aniket & Vivek  Created on 16/8/2018

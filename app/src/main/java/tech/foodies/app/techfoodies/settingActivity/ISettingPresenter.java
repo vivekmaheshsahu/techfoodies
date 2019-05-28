@@ -1,9 +1,9 @@
-package tech.foodies.ins_armman.techfoodies.settingActivity;
+package tech.foodies.app.techfoodies.settingActivity;
 
 import android.content.Context;
 import android.database.Cursor;
 
-import tech.foodies.ins_armman.techfoodies.utility.IBasePresenter;
+import tech.foodies.app.techfoodies.utility.IBasePresenter;
 
 
 /**

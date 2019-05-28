@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.utility;
+package tech.foodies.app.techfoodies.utility;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -18,10 +18,6 @@ import android.net.NetworkInfo;
 import android.util.DisplayMetrics;
 import android.view.View;
 
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.database.DatabaseContract;
-import tech.foodies.ins_armman.techfoodies.database.DatabaseManager;
-
 import java.io.ByteArrayOutputStream;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -30,8 +26,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.database.DatabaseContract;
+import tech.foodies.app.techfoodies.database.DatabaseManager;
+
 import static android.provider.MediaStore.Video.VideoColumns.LANGUAGE;
-import static tech.foodies.ins_armman.techfoodies.utility.Constants.UNIQUE_MEMBER_ID_SEPERATOR;
+import static tech.foodies.app.techfoodies.utility.Constants.UNIQUE_MEMBER_ID_SEPERATOR;
 
 /**
  * This class is used for storing shared Preference language,check internet connect and many other things also

@@ -1,14 +1,6 @@
-package tech.foodies.ins_armman.techfoodies.mainMenu;
+package tech.foodies.app.techfoodies.mainMenu;
 
 import android.database.Cursor;
-
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.data.model.SyncRegistrationDetails;
-import tech.foodies.ins_armman.techfoodies.data.model.syncing.FormDetails;
-import tech.foodies.ins_armman.techfoodies.data.model.syncing.QuestionAnswer;
-import tech.foodies.ins_armman.techfoodies.data.model.syncing.beneficiaries;
-import tech.foodies.ins_armman.techfoodies.database.DatabaseContract;
-import tech.foodies.ins_armman.techfoodies.utility.utility;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -16,7 +8,14 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import tech.foodies.ins_armman.techfoodies.utility.Constants;
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.data.model.SyncRegistrationDetails;
+import tech.foodies.app.techfoodies.data.model.syncing.FormDetails;
+import tech.foodies.app.techfoodies.data.model.syncing.QuestionAnswer;
+import tech.foodies.app.techfoodies.data.model.syncing.beneficiaries;
+import tech.foodies.app.techfoodies.database.DatabaseContract;
+import tech.foodies.app.techfoodies.utility.Constants;
+import tech.foodies.app.techfoodies.utility.utility;
 
 /**
  * @author Aniket & Vivek  Created on 15/8/2018
@@ -32,7 +31,7 @@ public class MainPresenter implements IMainPresenter<IMainView>, IMainInteractor
     private static final int FETCH_AROGYASAKHI_INFO = 108;
     IMainView iMainView;
     MainInteractor mainInteractor;
-    private String mUsername, mPassword,mUserId;
+    private String mUsername, mPassword, mUserId;
     private ArrayList<String> mImei;
     private IMainPresenter.OnQueryFinished mOnQueryFinished = new OnQueryFinished() {
         @Override
@@ -116,7 +115,7 @@ public class MainPresenter implements IMainPresenter<IMainView>, IMainInteractor
         SyncRegistrationDetails regDetails = new SyncRegistrationDetails();
         regDetails.setUserName(mUsername);
         regDetails.setPassword(mPassword);
-       // regDetails.setImei(mImei);
+        // regDetails.setImei(mImei);
 
         ArrayList<beneficiaries> regData = new ArrayList<>();
         while (cursor.moveToNext()) {
@@ -124,7 +123,7 @@ public class MainPresenter implements IMainPresenter<IMainView>, IMainInteractor
 
             String uniqueId = cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_UNIQUE_ID));
             details.setUniqueId(uniqueId);
-             details.setName(cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_FIRST_NAME)));
+            details.setName(cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_FIRST_NAME)));
             details.setAddress(cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_ADDRESS)));
             details.setMobNo(cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_MOBILE_NO)));
             details.setCity(cursor.getString(cursor.getColumnIndex(DatabaseContract.RegistrationTable.COLUMN_CITY)));

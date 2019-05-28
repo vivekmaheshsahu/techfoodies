@@ -1,11 +1,11 @@
-package tech.foodies.ins_armman.techfoodies.Question_Answer;
+package tech.foodies.app.techfoodies.Question_Answer;
 
 import android.database.Cursor;
 
-import tech.foodies.ins_armman.techfoodies.data.model.syncing.QuestionAnswer;
-import tech.foodies.ins_armman.techfoodies.data.model.syncing.beneficiaries;
-
 import java.util.ArrayList;
+
+import tech.foodies.app.techfoodies.data.model.syncing.QuestionAnswer;
+import tech.foodies.app.techfoodies.data.model.syncing.beneficiaries;
 
 public class place_order_presenter implements Iplace_order_presenter<Iplace_order_view> {
 
@@ -32,7 +32,7 @@ public class place_order_presenter implements Iplace_order_presenter<Iplace_orde
         QuestionAnswer details = new QuestionAnswer();
         Cursor cursor1 = place_order.fetchCustDetails();
         if (cursor1.moveToFirst() && cursor1 != null) {
-            for(int i=0;i<cursor1.getCount();i++) {
+            for (int i = 0; i < cursor1.getCount(); i++) {
                 beneficiaries answer = new beneficiaries();
                 answer.setUniqueId(cursor1.getString(cursor1.getColumnIndex("unique_id")));
                 answer.setSname(cursor1.getString(cursor1.getColumnIndex("sname")));
@@ -54,7 +54,7 @@ public class place_order_presenter implements Iplace_order_presenter<Iplace_orde
         QuestionAnswer details = new QuestionAnswer();
         Cursor cursor1 = place_order.fetchProductList();
         if (cursor1.moveToFirst() && cursor1 != null) {
-            for(int i=0;i<cursor1.getCount();i++) {
+            for (int i = 0; i < cursor1.getCount(); i++) {
                 QuestionAnswer answer = new QuestionAnswer();
                 answer.setKeyword(cursor1.getString(cursor1.getColumnIndex("keyword")));
                 answer.setAnswer(cursor1.getString(cursor1.getColumnIndex("question_label")));

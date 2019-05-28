@@ -1,18 +1,18 @@
-package tech.foodies.ins_armman.techfoodies.login;
+package tech.foodies.app.techfoodies.login;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 
-import tech.foodies.ins_armman.techfoodies.data.model.UserDetails;
-import tech.foodies.ins_armman.techfoodies.data.retrofit.RemoteDataSource;
-import tech.foodies.ins_armman.techfoodies.data.service.AuthService;
-import tech.foodies.ins_armman.techfoodies.database.DBHelper;
-import tech.foodies.ins_armman.techfoodies.database.DatabaseContract;
-import tech.foodies.ins_armman.techfoodies.utility.utility;
-
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import tech.foodies.app.techfoodies.data.model.UserDetails;
+import tech.foodies.app.techfoodies.data.retrofit.RemoteDataSource;
+import tech.foodies.app.techfoodies.data.service.AuthService;
+import tech.foodies.app.techfoodies.database.DBHelper;
+import tech.foodies.app.techfoodies.database.DatabaseContract;
+import tech.foodies.app.techfoodies.utility.utility;
 
 /**
  * @author Aniket & Vivek  Created on 15/8/2018
@@ -49,10 +49,10 @@ public class LoginInteractor implements ILoginInteractor {
             values.put(DatabaseContract.LoginTable.COLUMN_USERNAME, username);
             values.put(DatabaseContract.LoginTable.COLUMN_PASSWORD, password);
             values.put(DatabaseContract.LoginTable.COLUMN_PHONE_NO, jsonObjectUser.optString("contact"));
-            values.put(DatabaseContract.LoginTable.COLUMN_CITY,jsonObjectUser.optString("city"));
-            values.put(DatabaseContract.LoginTable.COLUMN_STATE,jsonObjectUser.optString("state"));
-            values.put(DatabaseContract.LoginTable.COLUMN_USER_TYPE,jsonObjectUser.optString("user_type"));
-            values.put(DatabaseContract.LoginTable.COLUMN_ZONE,jsonObjectUser.optString("zone"));
+            values.put(DatabaseContract.LoginTable.COLUMN_CITY, jsonObjectUser.optString("city"));
+            values.put(DatabaseContract.LoginTable.COLUMN_STATE, jsonObjectUser.optString("state"));
+            values.put(DatabaseContract.LoginTable.COLUMN_USER_TYPE, jsonObjectUser.optString("user_type"));
+            values.put(DatabaseContract.LoginTable.COLUMN_ZONE, jsonObjectUser.optString("zone"));
 
             utility.getDatabase().insert(DatabaseContract.LoginTable.TABLE_NAME, null, values);
         }

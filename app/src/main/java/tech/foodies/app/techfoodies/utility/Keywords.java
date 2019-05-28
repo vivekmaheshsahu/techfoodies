@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.utility;
+package tech.foodies.app.techfoodies.utility;
 
 
 public interface Keywords {

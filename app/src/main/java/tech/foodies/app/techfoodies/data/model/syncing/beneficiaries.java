@@ -1,7 +1,8 @@
-package tech.foodies.ins_armman.techfoodies.data.model.syncing;
+package tech.foodies.app.techfoodies.data.model.syncing;
 
 import com.google.gson.annotations.SerializedName;
-import tech.foodies.ins_armman.techfoodies.database.DatabaseContract.RegistrationTable;
+
+import tech.foodies.app.techfoodies.database.DatabaseContract.RegistrationTable;
 
 /**
  * @author Aniket & Vivek  Created on 4/9/2018

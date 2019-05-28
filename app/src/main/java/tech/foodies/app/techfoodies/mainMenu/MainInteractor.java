@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.mainMenu;
+package tech.foodies.app.techfoodies.mainMenu;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -9,27 +9,27 @@ import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.support.v7.app.AppCompatActivity;
 
-import tech.foodies.ins_armman.techfoodies.data.model.SyncRegistrationDetails;
-import tech.foodies.ins_armman.techfoodies.data.model.syncing.FormDetails;
-import tech.foodies.ins_armman.techfoodies.data.retrofit.RemoteDataSource;
-import tech.foodies.ins_armman.techfoodies.data.service.SyncFormService;
-import tech.foodies.ins_armman.techfoodies.data.service.SyncRegistrationService;
-import tech.foodies.ins_armman.techfoodies.database.DBHelper;
-import tech.foodies.ins_armman.techfoodies.database.DatabaseContract;
-import tech.foodies.ins_armman.techfoodies.database.GenericCursorLoader;
-import tech.foodies.ins_armman.techfoodies.database.LocalDataSource;
-import tech.foodies.ins_armman.techfoodies.utility.Constants;
-import tech.foodies.ins_armman.techfoodies.utility.utility;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import static tech.foodies.ins_armman.techfoodies.utility.Constants.INVALID_DATA;
-import static tech.foodies.ins_armman.techfoodies.utility.Constants.RESPONSE;
-import static tech.foodies.ins_armman.techfoodies.utility.Constants.STATUS;
-import static tech.foodies.ins_armman.techfoodies.utility.Constants.UNIQUE_ID;
-import static tech.foodies.ins_armman.techfoodies.utility.utility.getDatabase;
+import tech.foodies.app.techfoodies.data.model.SyncRegistrationDetails;
+import tech.foodies.app.techfoodies.data.model.syncing.FormDetails;
+import tech.foodies.app.techfoodies.data.retrofit.RemoteDataSource;
+import tech.foodies.app.techfoodies.data.service.SyncFormService;
+import tech.foodies.app.techfoodies.data.service.SyncRegistrationService;
+import tech.foodies.app.techfoodies.database.DBHelper;
+import tech.foodies.app.techfoodies.database.DatabaseContract;
+import tech.foodies.app.techfoodies.database.GenericCursorLoader;
+import tech.foodies.app.techfoodies.database.LocalDataSource;
+import tech.foodies.app.techfoodies.utility.Constants;
+import tech.foodies.app.techfoodies.utility.utility;
+
+import static tech.foodies.app.techfoodies.utility.Constants.INVALID_DATA;
+import static tech.foodies.app.techfoodies.utility.Constants.RESPONSE;
+import static tech.foodies.app.techfoodies.utility.Constants.STATUS;
+import static tech.foodies.app.techfoodies.utility.Constants.UNIQUE_ID;
+import static tech.foodies.app.techfoodies.utility.utility.getDatabase;
 
 /**
  * @author Aniket & Vivek  Created on 15/8/2018

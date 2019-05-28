@@ -1,7 +1,8 @@
-package tech.foodies.ins_armman.techfoodies.data.model.restoredata;
+package tech.foodies.app.techfoodies.data.model.restoredata;
 
 import com.google.gson.annotations.SerializedName;
-import tech.foodies.ins_armman.techfoodies.data.model.UserDetails;
+
+import tech.foodies.app.techfoodies.data.model.UserDetails;
 
 /**
  * @author Aniket & Vivek  Created on 4/9/2018

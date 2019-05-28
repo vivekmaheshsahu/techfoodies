@@ -1,8 +1,8 @@
-package tech.foodies.ins_armman.techfoodies.all_order;
+package tech.foodies.app.techfoodies.all_order;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,12 +11,12 @@ import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.data.model.all_order_model;
-
 import java.util.List;
 
-public class all_order extends AppCompatActivity implements Iall_order_view,OrderFormAdapter.ClickListener  {
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.data.model.all_order_model;
+
+public class all_order extends AppCompatActivity implements Iall_order_view, OrderFormAdapter.ClickListener {
 
     Iall_order_presenter iall_order_presenter;
     ProgressBar mProgressBar;
@@ -63,7 +63,8 @@ public class all_order extends AppCompatActivity implements Iall_order_view,Orde
             TextView emptyTextView = findViewById(R.id.text_empty_list);
             emptyTextView.setText(R.string.Reg_women_com);
             return;
-        }if(womenList != null) {
+        }
+        if (womenList != null) {
             mcompleteFormAdapter = new OrderFormAdapter(getContext(), womenList);
             mRecyclerView.setAdapter(mcompleteFormAdapter);
             mcompleteFormAdapter.setClickListener(this);

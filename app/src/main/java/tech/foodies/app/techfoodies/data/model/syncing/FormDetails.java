@@ -1,13 +1,14 @@
-package tech.foodies.ins_armman.techfoodies.data.model.syncing;
+package tech.foodies.app.techfoodies.data.model.syncing;
 
 import com.google.gson.annotations.SerializedName;
-import tech.foodies.ins_armman.techfoodies.data.model.UserDetails;
 
 import java.util.ArrayList;
 
-import static tech.foodies.ins_armman.techfoodies.utility.Constants.DATA;
-import static tech.foodies.ins_armman.techfoodies.utility.Constants.FORM_ID;
-import static tech.foodies.ins_armman.techfoodies.utility.Constants.UNIQUE_ID;
+import tech.foodies.app.techfoodies.data.model.UserDetails;
+
+import static tech.foodies.app.techfoodies.utility.Constants.DATA;
+import static tech.foodies.app.techfoodies.utility.Constants.FORM_ID;
+import static tech.foodies.app.techfoodies.utility.Constants.UNIQUE_ID;
 
 /**
  * @author Aniket & Vivek  Created on 4/9/2018

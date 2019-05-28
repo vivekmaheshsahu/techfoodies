@@ -1,4 +1,4 @@
-package tech.foodies.ins_armman.techfoodies.settingActivity;
+package tech.foodies.app.techfoodies.settingActivity;
 
 import android.app.DownloadManager;
 import android.content.BroadcastReceiver;
@@ -22,25 +22,6 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import tech.foodies.ins_armman.techfoodies.R;
-import tech.foodies.ins_armman.techfoodies.data.model.Form;
-import tech.foodies.ins_armman.techfoodies.data.model.RequestFormModel;
-import tech.foodies.ins_armman.techfoodies.data.model.restoredata.BeneficiariesList;
-import tech.foodies.ins_armman.techfoodies.data.model.restoredata.RestoreDataRequest;
-import tech.foodies.ins_armman.techfoodies.data.model.restoredata.VisitsList;
-import tech.foodies.ins_armman.techfoodies.data.model.syncing.QuestionAnswer;
-import tech.foodies.ins_armman.techfoodies.data.model.syncing.beneficiaries;
-import tech.foodies.ins_armman.techfoodies.data.retrofit.RemoteDataSource;
-import tech.foodies.ins_armman.techfoodies.data.service.CheckUpdateService;
-import tech.foodies.ins_armman.techfoodies.data.service.FormDownloadService;
-import tech.foodies.ins_armman.techfoodies.data.service.RestoreRegistrationService;
-import tech.foodies.ins_armman.techfoodies.data.service.RestoreVisitsService;
-import tech.foodies.ins_armman.techfoodies.database.DatabaseContract;
-import tech.foodies.ins_armman.techfoodies.database.GenericCursorLoader;
-import tech.foodies.ins_armman.techfoodies.database.LocalDataSource;
-import tech.foodies.ins_armman.techfoodies.utility.Constants;
-import tech.foodies.ins_armman.techfoodies.utility.utility;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -48,13 +29,32 @@ import org.json.JSONObject;
 import java.io.File;
 import java.util.ArrayList;
 
-import static tech.foodies.ins_armman.techfoodies.database.DatabaseContract.FilledFormStatusTable;
-import static tech.foodies.ins_armman.techfoodies.database.DatabaseContract.FormDetailsTable;
-import static tech.foodies.ins_armman.techfoodies.database.DatabaseContract.RegistrationTable;
-import static tech.foodies.ins_armman.techfoodies.utility.Constants.DEFAULT_HASH;
-import static tech.foodies.ins_armman.techfoodies.utility.Constants.HASH_ITEM_FORM;
-import static tech.foodies.ins_armman.techfoodies.utility.Constants.TOTAL_FORM_COUNT;
-import static tech.foodies.ins_armman.techfoodies.utility.utility.getDatabase;
+import tech.foodies.app.techfoodies.R;
+import tech.foodies.app.techfoodies.data.model.Form;
+import tech.foodies.app.techfoodies.data.model.RequestFormModel;
+import tech.foodies.app.techfoodies.data.model.restoredata.BeneficiariesList;
+import tech.foodies.app.techfoodies.data.model.restoredata.RestoreDataRequest;
+import tech.foodies.app.techfoodies.data.model.restoredata.VisitsList;
+import tech.foodies.app.techfoodies.data.model.syncing.QuestionAnswer;
+import tech.foodies.app.techfoodies.data.model.syncing.beneficiaries;
+import tech.foodies.app.techfoodies.data.retrofit.RemoteDataSource;
+import tech.foodies.app.techfoodies.data.service.CheckUpdateService;
+import tech.foodies.app.techfoodies.data.service.FormDownloadService;
+import tech.foodies.app.techfoodies.data.service.RestoreRegistrationService;
+import tech.foodies.app.techfoodies.data.service.RestoreVisitsService;
+import tech.foodies.app.techfoodies.database.DatabaseContract;
+import tech.foodies.app.techfoodies.database.GenericCursorLoader;
+import tech.foodies.app.techfoodies.database.LocalDataSource;
+import tech.foodies.app.techfoodies.utility.Constants;
+import tech.foodies.app.techfoodies.utility.utility;
+
+import static tech.foodies.app.techfoodies.database.DatabaseContract.FilledFormStatusTable;
+import static tech.foodies.app.techfoodies.database.DatabaseContract.FormDetailsTable;
+import static tech.foodies.app.techfoodies.database.DatabaseContract.RegistrationTable;
+import static tech.foodies.app.techfoodies.utility.Constants.DEFAULT_HASH;
+import static tech.foodies.app.techfoodies.utility.Constants.HASH_ITEM_FORM;
+import static tech.foodies.app.techfoodies.utility.Constants.TOTAL_FORM_COUNT;
+import static tech.foodies.app.techfoodies.utility.utility.getDatabase;
 
 /**
  * @author Aniket & Vivek  Created on 21/8/2018
@@ -434,7 +434,7 @@ public class SettingInteractor implements ISettingInteractor, LoaderManager.Load
                         }
 
                         if (main_question_keys.optJSONArray("options") != null) {
-                                JSONArray main_question_optionArray = main_question_keys.optJSONArray("options");
+                            JSONArray main_question_optionArray = main_question_keys.optJSONArray("options");
 
                             for (int k = 0; k < main_question_optionArray.length(); k++) {
 
@@ -633,7 +633,6 @@ public class SettingInteractor implements ISettingInteractor, LoaderManager.Load
             }
 
 
-
             option_keyword = main_ques_options_key.optString("keyword");
 
             depend1 = main_ques_options_key.optString("dependents");
@@ -677,7 +676,7 @@ public class SettingInteractor implements ISettingInteractor, LoaderManager.Load
                     JSONArray jsonArray4 = main_ques_action.optJSONArray("question");
 
                     for (int p = 0; p < jsonArray4.length(); p++) {
-                            JSONObject dependant_ques_key = jsonArray4.getJSONObject(p);
+                        JSONObject dependant_ques_key = jsonArray4.getJSONObject(p);
 
                         JSONObject depandant_ques_lang = dependant_ques_key.getJSONObject("languages");
 
@@ -761,9 +760,7 @@ public class SettingInteractor implements ISettingInteractor, LoaderManager.Load
                             saveQuestionOptions(Form_id, dependant_ques_key.optInt("id"), dependant_ques_option_key.optString("keyword"),
                                     dependant_ques_option_key.optString("languages"), dependant_ques_messages);
 
-                            if (dependant_ques_option_key.optString("action").toString() != null && dependant_ques_option_key.optString("action").toString().length() > 0)
-
-                            {
+                            if (dependant_ques_option_key.optString("action").toString() != null && dependant_ques_option_key.optString("action").toString().length() > 0) {
                                 JSONObject recursive_action_dependant_key = dependant_ques_option_key.getJSONObject("action");
                                 String option_keyword = dependant_ques_option_key.optString("keyword");
                                 actionDependantQuestions(recursive_action_dependant_key, option_keyword, orientation);
