@@ -117,6 +117,7 @@
                 android:text="Submit"
                 android:textColor="@color/color_white"
                 android:textStyle="bold"
+                android:onClick="submit"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/textinputlayout_password"
                 app:layout_constraintStart_toStartOf="@+id/textinputlayout_password"
