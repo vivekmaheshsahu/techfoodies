@@ -49,18 +49,18 @@ public final class DatabaseContract {
     public static final class RegistrationTable {
         public static final String TABLE_NAME = "registration";
         public static final String COLUMN_ID = "id";
-        public static final String COLUMN_UNIQUE_ID = "unique_id";
-        public static final String COLUMN_FIRST_NAME = "name";
-        public static final String COLUMN_ADDRESS = "address";
-        public static final String COLUMN_SNAME = "sname";
-        public static final String COLUMN_MOBILE_NO = "phone_no";
+        public static final String COLUMN_UNIQUE_ID = "customer_id";
+        public static final String COLUMN_FIRST_NAME = "customer_first_name";
+        public static final String COLUMN_ADDRESS = "customer_shop_address";
+        public static final String COLUMN_SNAME = "customer_shop_name";
+        public static final String COLUMN_MOBILE_NO = "customer_phone1";
         public static final String COLUMN_CREATED_ON = "created_on";
         public static final String COLUMN_SYNC_STATUS = "sync_status";
         public static final String COLUMN_ZONE = "customer_zone";
         public static final String COLUMN_CITY = "customer_city";
         public static final String COLUMN_STATE = "customer_state";
-        public static final String COLUMN_ALT_CONTACT = "alternative_contact";
-        public static final String COLUMN_REGISTRATION_STATUS = "registration_status";
+        public static final String COLUMN_ALT_CONTACT = "customer_phone2";
+        public static final String COLUMN_REGISTRATION_STATUS = "customer_status";
         /*COLUMN_FAILURE_STATUS and COLUMN_FAILURE_REASON column is to maintain
             data sync failure status and reason
          */
