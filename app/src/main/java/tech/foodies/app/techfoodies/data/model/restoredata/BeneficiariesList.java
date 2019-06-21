@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class BeneficiariesList {
     @SerializedName("unique_id")
     private String uniqueId;
-    @SerializedName("visits")
+    @SerializedName("OrderDetail")
     private ArrayList<VisitsList> visitsList;
 
     public String getUniqueId() {

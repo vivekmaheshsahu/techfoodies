@@ -824,11 +824,11 @@ public class SettingInteractor implements ISettingInteractor, LoaderManager.Load
                 publishProgress(++mProgress);
             }
 
-//            for (BeneficiariesList data :
-//                    listVisits) {
-//                saveVisits(data);
-//                publishProgress(++mProgress);
-//            }
+            for (BeneficiariesList data :
+                    listVisits) {
+                saveVisits(data);
+                publishProgress(++mProgress);
+            }
 
             utility.getDatabase().setTransactionSuccessful();
             utility.getDatabase().endTransaction();
@@ -878,10 +878,10 @@ public class SettingInteractor implements ISettingInteractor, LoaderManager.Load
 
                 int referenceId = (int) utility.getDatabase().insert(FilledFormStatusTable.TABLE_NAME, null, values);
 
-                for (QuestionAnswer questionAnswer :
-                        list.getQuestionAnswers()) {
-                    saveQuestionAnswers(referenceId, data.getUniqueId(), list.getFormId(), questionAnswer);
-                }
+//                for (QuestionAnswer questionAnswer :
+//                        list.getQuestionAnswers()) {
+//                    saveQuestionAnswers(referenceId, data.getUniqueId(), list.getFormId(), questionAnswer);
+//                }
 
             }
         }

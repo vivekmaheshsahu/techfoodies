@@ -174,7 +174,7 @@ public final class DatabaseContract {
         public static final String TABLE_NAME = "question_answers";
         public static final String COLUMN_REFERENCE_ID = "reference_id";
         public static final String COLUMN_UNIQUE_ID = "unique_id";
-        public static final String COLUMN_FORM_ID = "form_id";
+        public static final String COLUMN_FORM_ID = "order_detail_id";
         public static final String COLUMN_QUESTION_KEYWORD = "question_keyword";
         public static final String COLUMN_ANSWER_KEYWORD = "answer_keyword";
         public static final String COLUMN_CREATED_ON = "created_on";
@@ -194,7 +194,7 @@ public final class DatabaseContract {
         public static final String TABLE_NAME = "filled_forms_status";
         public static final String COLUMN_ID = "id";
         public static final String COLUMN_UNIQUE_ID = "unique_id";
-        public static final String COLUMN_FORM_ID = "form_id";
+        public static final String COLUMN_FORM_ID = "order_id";
         public static final String COLUMN_FORM_COMPLETION_STATUS = "form_completion_status";
         public static final String COLUMN_FORM_SYNC_STATUS = "form_sync_status";
         public static final String COLUMN_CREATED_ON = "created_on";
