@@ -34,9 +34,9 @@ public class place_order_presenter implements Iplace_order_presenter<Iplace_orde
         if (cursor1.moveToFirst() && cursor1 != null) {
             for (int i = 0; i < cursor1.getCount(); i++) {
                 beneficiaries answer = new beneficiaries();
-                answer.setUniqueId(cursor1.getString(cursor1.getColumnIndex("unique_id")));
-                answer.setSname(cursor1.getString(cursor1.getColumnIndex("sname")));
-                answer.setName(cursor1.getString(cursor1.getColumnIndex("name")));
+                answer.setUniqueId(cursor1.getString(cursor1.getColumnIndex("customer_id")));
+                answer.setSname(cursor1.getString(cursor1.getColumnIndex("customer_shop_name")));
+                answer.setName(cursor1.getString(cursor1.getColumnIndex("customer_shop_address")));
                 arrayList_cust.add(answer);
                 cursor1.moveToNext();
             }
