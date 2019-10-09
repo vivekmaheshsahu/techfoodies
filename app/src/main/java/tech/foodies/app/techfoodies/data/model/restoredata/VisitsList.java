@@ -11,12 +11,12 @@ import tech.foodies.app.techfoodies.data.model.syncing.QuestionAnswer;
  */
 
 public class VisitsList {
-    @SerializedName("id")
+    @SerializedName("quantity")
     private int formId;
-    @SerializedName("created_on")
+    @SerializedName("product_name")
     private String createdOn;
-    @SerializedName("data")
-    private ArrayList<QuestionAnswer> questionAnswers;
+//    @SerializedName("data")
+//    private ArrayList<QuestionAnswer> questionAnswers;
 
     public int getFormId() {
         return formId;
@@ -34,20 +34,20 @@ public class VisitsList {
         this.createdOn = createdOn;
     }
 
-    public ArrayList<QuestionAnswer> getQuestionAnswers() {
-        return questionAnswers;
-    }
-
-    public void setQuestionAnswers(ArrayList<QuestionAnswer> questionAnswers) {
-        this.questionAnswers = questionAnswers;
-    }
+//    public ArrayList<QuestionAnswer> getQuestionAnswers() {
+//        return questionAnswers;
+//    }
+//
+//    public void setQuestionAnswers(ArrayList<QuestionAnswer> questionAnswers) {
+//        this.questionAnswers = questionAnswers;
+//    }
 
     @Override
     public String toString() {
         return "VisitsList{" +
                 "formId=" + formId +
                 ", createdOn='" + createdOn + '\'' +
-                ", questionAnswers=" + questionAnswers +
+              //  ", questionAnswers=" + questionAnswers +
                 '}';
     }
 }

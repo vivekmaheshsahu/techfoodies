@@ -11,78 +11,78 @@ import tech.foodies.app.techfoodies.database.DatabaseContract.RegistrationTable;
 public class beneficiaries {
 
     @SerializedName(RegistrationTable.COLUMN_UNIQUE_ID)
-    private String uniqueId;
+    private String customer_id;
     @SerializedName(RegistrationTable.COLUMN_FIRST_NAME)
-    private String Name;
+    private String customer_first_name;
     @SerializedName(RegistrationTable.COLUMN_ADDRESS)
-    private String address;
+    private String customer_shop_address;
     @SerializedName(RegistrationTable.COLUMN_MOBILE_NO)
-    private String mobNo;
+    private String customer_shop_name;
     @SerializedName(RegistrationTable.COLUMN_ALT_CONTACT)
-    private String altNumber;
+    private String customer_phone1;
     @SerializedName(RegistrationTable.COLUMN_CITY)
-    private String city;
+    private String customer_city;
     @SerializedName(RegistrationTable.COLUMN_STATE)
-    private String state;
+    private String customer_state;
     @SerializedName(RegistrationTable.COLUMN_SNAME)
     private String sname;
     @SerializedName(RegistrationTable.COLUMN_ZONE)
     private String zone;
 
     public String getUniqueId() {
-        return uniqueId;
+        return customer_id;
     }
 
     public void setUniqueId(String uniqueId) {
-        this.uniqueId = uniqueId;
+        this.customer_id = uniqueId;
     }
 
     public String getName() {
-        return Name;
+        return customer_first_name;
     }
 
     public void setName(String firstName) {
-        this.Name = firstName;
+        this.customer_first_name = firstName;
     }
 
     public String getAddress() {
-        return address;
+        return customer_shop_address;
     }
 
     public void setAddress(String address) {
-        this.address = address;
+        this.customer_shop_address = address;
     }
 
     public String getMobNo() {
-        return mobNo;
+        return customer_shop_name;
     }
 
     public void setMobNo(String mobNo) {
-        this.mobNo = mobNo;
+        this.customer_shop_name = mobNo;
     }
 
     public String getAltNumber() {
-        return altNumber;
+        return customer_phone1;
     }
 
     public void setAltNumber(String altNumber) {
-        this.altNumber = altNumber;
+        this.customer_phone1 = altNumber;
     }
 
     public String getCity() {
-        return city;
+        return customer_city;
     }
 
     public void setCity(String city) {
-        this.city = city;
+        this.customer_city = city;
     }
 
     public String getState() {
-        return state;
+        return customer_state;
     }
 
     public void setState(String state) {
-        this.state = state;
+        this.customer_state = state;
     }
 
     public String getSname() {
@@ -106,13 +106,13 @@ public class beneficiaries {
 
     public String toString() {
         return "beneficiaries{" +
-                "uniqueId='" + uniqueId + '\'' +
-                ", Name='" + Name + '\'' +
-                ", address='" + address + '\'' +
-                ", mobNo='" + mobNo + '\'' +
-                ", altNumber='" + altNumber + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
+                "uniqueId='" + customer_id + '\'' +
+                ", Name='" + customer_city + '\'' +
+                ", address='" + customer_first_name + '\'' +
+                ", mobNo='" + customer_shop_address + '\'' +
+                ", altNumber='" + customer_phone1 + '\'' +
+                ", city='" + customer_city + '\'' +
+                ", state='" + customer_state + '\'' +
                 ", sname='" + sname + '\'' +
                 '}';
     }

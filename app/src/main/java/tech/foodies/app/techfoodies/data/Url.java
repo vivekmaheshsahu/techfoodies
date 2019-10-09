@@ -19,8 +19,8 @@ public interface Url {
     String SYNC_FORM_DATA = "store_answer";
     String SYNC_REFERRAL_DATA = "update_referral";
     String SYNC_CHILD_GROWTH = "childgrowth";
-    String GET_REGISTRATIONS = "getregistrations";
-    String GET_VISITS = "getvisits";
+    String GET_REGISTRATIONS = "getCustomerDetail";
+    String GET_VISITS = "getOrderDetails";
     String GET_REFERRALS = "getreferrals";
     String GET_CHILD_GRWOTH = "getchildgrowth";
 

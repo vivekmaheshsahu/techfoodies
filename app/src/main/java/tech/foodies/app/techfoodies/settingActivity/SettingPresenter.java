@@ -247,7 +247,9 @@ public class SettingPresenter implements ISettingPresenter<ISettingView>
             pageCounter = 1;
             totalPages = 0;
             totalPagesCalculated = false;
-            restoreVisits(pageCounter);
+            mSettingsView.hideProgressBar();
+            settingInteractor.saveDownloadedData(listRegistrations, listVisits);
+            //restoreVisits(pageCounter);
         }
     }
 

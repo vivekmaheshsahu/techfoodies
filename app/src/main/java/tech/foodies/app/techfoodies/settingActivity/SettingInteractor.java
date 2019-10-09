@@ -854,10 +854,11 @@ public class SettingInteractor implements ISettingInteractor, LoaderManager.Load
             values.put(RegistrationTable.COLUMN_FIRST_NAME, data.getName());
             values.put(RegistrationTable.COLUMN_MOBILE_NO, data.getMobNo());
             values.put(RegistrationTable.COLUMN_ADDRESS, data.getAddress());
-//            values.put(RegistrationTable.COLUMN_DOB, data.getAge());
-//            values.put(RegistrationTable.COLUMN_EDUCATION, data.getEducation());
-//            values.put(RegistrationTable.COLUMN_MOTHER_ID, data.getMotherId());
-//            values.put(RegistrationTable.COLUMN_GENDER, data.getGender());
+            values.put(RegistrationTable.COLUMN_ALT_CONTACT, data.getAltNumber());
+            values.put(RegistrationTable.COLUMN_SNAME, data.getSname());
+            values.put(RegistrationTable.COLUMN_STATE, data.getState());
+            values.put(RegistrationTable.COLUMN_CITY, data.getCity());
+            values.put(RegistrationTable.COLUMN_ZONE,data.getZone());
             values.put(RegistrationTable.COLUMN_REGISTRATION_STATUS, 1);
             values.put(RegistrationTable.COLUMN_SYNC_STATUS, 1);
 
@@ -877,10 +878,10 @@ public class SettingInteractor implements ISettingInteractor, LoaderManager.Load
 
                 int referenceId = (int) utility.getDatabase().insert(FilledFormStatusTable.TABLE_NAME, null, values);
 
-                for (QuestionAnswer questionAnswer :
-                        list.getQuestionAnswers()) {
-                    saveQuestionAnswers(referenceId, data.getUniqueId(), list.getFormId(), questionAnswer);
-                }
+//                for (QuestionAnswer questionAnswer :
+//                        list.getQuestionAnswers()) {
+//                    saveQuestionAnswers(referenceId, data.getUniqueId(), list.getFormId(), questionAnswer);
+//                }
 
             }
         }
