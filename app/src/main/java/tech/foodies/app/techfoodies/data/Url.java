@@ -8,7 +8,7 @@ public interface Url {
 
     //API V2 added after data sync error message structure changed
 
-    String BASE_URL = "http://www.vandanafoods.com/inventory/api/";
+    String BASE_URL = "http://www.inventory.vandanafoods.com/api/";
    // String BASE_URL = "http://arogyasakhi.armman.org/API/V2/";
     String AUTHENTICATE = "login";
     String DOWNLOAD_FORMS = "newjson";
