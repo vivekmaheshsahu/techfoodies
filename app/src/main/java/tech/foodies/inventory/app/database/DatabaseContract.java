@@ -198,9 +198,7 @@ public final class DatabaseContract {
         public static final String COLUMN_FORM_COMPLETION_STATUS = "form_completion_status";
         public static final String COLUMN_FORM_SYNC_STATUS = "form_sync_status";
         public static final String COLUMN_CREATED_ON = "created_on";
-        /*COLUMN_FAILURE_STATUS and COLUMN_FAILURE_REASON column is to maintain
-                   data sync failure status and reason
-                */
+
         public static final String COLUMN_FAILURE_STATUS = "failure_status";
         public static final String COLUMN_FAILURE_REASON = "failure_reason";
 
@@ -283,29 +281,5 @@ public final class DatabaseContract {
                 COLUMN_CREATED_ON + TEXT_TYPE +
                 ")";
     }
-
-//    public static final class ProductTable {
-//        public static final String TABLE_NAME = "product";
-//        public static final String COLUMN_ID = "product_id";
-//        public static final String COLUMN_NAME = "product_name";
-//        public static final String COLUMN_DESCRIPTION = "product_description";
-//        public static final String COLUMN_IMAGE = "product_image";
-//        public static final String COLUMN_PRICE = "product_price";
-//        public static final String COLUMN_MRP = "product_mrp";
-//        public static final String COLUMN_STATUS = "product_status";
-//        public static final String COLUMN_WEIGHT = "product_weight";
-//
-//        public static final String CREAT_TABLE = "CREATE TABLE IF NOT EXISTS " + TABLE_NAME +
-//                "(" +
-//                COLUMN_ID + INTEGER_TYPE + "PRIMARY KEY AUTOINCREMENT" + COMMA_SEP +
-//                COLUMN_NAME + TEXT_TYPE + COMMA_SEP +
-//                COLUMN_DESCRIPTION + TEXT_TYPE + COMMA_SEP +
-//                COLUMN_IMAGE + TEXT_TYPE + COMMA_SEP +
-//                COLUMN_PRICE + TEXT_TYPE + COMMA_SEP +
-//                COLUMN_MRP + TEXT_TYPE + COMMA_SEP +
-//                COLUMN_STATUS + TEXT_TYPE + COMMA_SEP +
-//                COLUMN_WEIGHT + TEXT_TYPE +
-//                ")";
-//    }
 
 }

@@ -42,7 +42,6 @@ public class MainPresenter implements IMainPresenter<IMainView>, IMainInteractor
                         mUsername = cursor.getString(cursor.getColumnIndex(DatabaseContract.LoginTable.COLUMN_USERNAME));
                         mPassword = cursor.getString(cursor.getColumnIndex(DatabaseContract.LoginTable.COLUMN_PASSWORD));
                         mUserId = cursor.getString(cursor.getColumnIndex(DatabaseContract.LoginTable.COLUMN_USER_ID));
-                        mImei = utility.getDeviceImeiNumber(iMainView.getContext());
                         String arogyasakhiName =
                                 cursor.getString(cursor.getColumnIndex(DatabaseContract.LoginTable.COLUMN_NAME));
                     }

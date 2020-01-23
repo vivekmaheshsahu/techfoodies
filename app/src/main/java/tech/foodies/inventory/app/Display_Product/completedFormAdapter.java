@@ -68,9 +68,6 @@ public class completedFormAdapter extends RecyclerView.Adapter<completedFormAdap
         private void bindData(final completeFiledForm listModel) {
             if (listModel != null) {
                 String data = listModel.getName();
-//                JsonParser parser = new JsonParser();
-//                JsonObject jsonObject = (JsonObject) parser.parse(data);
-//                String  fetch_data = jsonObject.getAsString();
                 textViewName.setText(data);
 
             }
@@ -78,16 +75,6 @@ public class completedFormAdapter extends RecyclerView.Adapter<completedFormAdap
 
         @Override
         public void onClick(View v) {
-            //   Toast.makeText(mContext, "Hello Its Working", Toast.LENGTH_SHORT).show();
-
-                /*Intent intent = new Intent(mContext, CompletedFormsList.class);
-                if (clickListener != null) {
-                    clickListener.itemClicked(v,getPosition());
-                    int i = mWomenList.size();
-                intent.putExtra("id",mWomenList.get(getPosition()).getUnique_id());
-                intent.putExtra("name",mWomenList.get(getPosition()).getName());
-                }
-                mContext.startActivity(intent);*/
         }
     }
 }

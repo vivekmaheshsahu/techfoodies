@@ -11,8 +11,6 @@ public class VisitsList {
     private int formId;
     @SerializedName("product_name")
     private String createdOn;
-//    @SerializedName("data")
-//    private ArrayList<QuestionAnswer> questionAnswers;
 
     public int getFormId() {
         return formId;
@@ -29,14 +27,6 @@ public class VisitsList {
     public void setCreatedOn(String createdOn) {
         this.createdOn = createdOn;
     }
-
-//    public ArrayList<QuestionAnswer> getQuestionAnswers() {
-//        return questionAnswers;
-//    }
-//
-//    public void setQuestionAnswers(ArrayList<QuestionAnswer> questionAnswers) {
-//        this.questionAnswers = questionAnswers;
-//    }
 
     @Override
     public String toString() {

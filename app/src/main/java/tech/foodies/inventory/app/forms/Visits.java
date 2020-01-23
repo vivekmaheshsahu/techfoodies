@@ -87,26 +87,6 @@ public class Visits {
         return anmUsername;
     }
 
-    // Bitmap images;
-
-//    public Visits(String id, String images, String name, String village)
-//    {
-//
-//        this.id = id;
-//        this.name = name;
-//        this.village = village;
-//        this.images = images;
-//
-//    }
-
-//    public String getFormAutoId() {
-//        return formAutoId;
-//    }
-//
-//    public void setFormAutoId(String formAutoId) {
-//        this.formAutoId = formAutoId;
-//    }
-
     public void setAnmUsername(String anmUsername) {
         this.anmUsername = anmUsername;
     }

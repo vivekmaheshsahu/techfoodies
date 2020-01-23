@@ -69,29 +69,4 @@ public class RemoteDataSource {
         return new RestoreVisitsService(createApiService(RestoreVisitsServiceAPI.class));
     }
 
-  /*
-
-    public HelpManualDownloadService helpManualDownloadService() {
-        return new HelpManualDownloadService(createApiService(HelpManualDownloadServiceApi.class));
-    }
-
-    public SyncReferralService syncReferralService() {
-        return new SyncReferralService(createApiService(SyncReferralServiceApi.class));
-    }
-
-    public SendChildGrowthDataService sendChildGrowthDataService() {
-        return new SendChildGrowthDataService(createApiService(SendChildGrowthDataAPI.class));
-    }
-
-    public RestoreReferralService restoreReferralService() {
-        return new RestoreReferralService(createApiService(RestoreReferralServiceAPI.class));
-    }
-
-    public SyncUpdatePhotoService syncUpdatePhotoService() {
-        return new SyncUpdatePhotoService(createApiService(SyncUpdatePhotoServiceApi.class));
-    }
-
-    public RestoreChildGrowthService restoreChildGrowthService() {
-        return new RestoreChildGrowthService(createApiService(RestoreChildGrowthServiceAPI.class));
-    }*/
 }

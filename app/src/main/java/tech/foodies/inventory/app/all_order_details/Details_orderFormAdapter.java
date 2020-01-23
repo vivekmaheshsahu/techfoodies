@@ -74,14 +74,6 @@ public class Details_orderFormAdapter extends RecyclerView.Adapter<Details_order
 
         @Override
         public void onClick(View v) {
-             /*Intent intent = new Intent(mContext, CompletedFormsList.class);
-                if (clickListener != null) {
-                    clickListener.itemClicked(v,getPosition());
-                    int i = mWomenList.size();
-                intent.putExtra("id",mWomenList.get(getPosition()).getUnique_id());
-                intent.putExtra("name",mWomenList.get(getPosition()).getName());
-                }
-                mContext.startActivity(intent);*/
         }
     }
 }

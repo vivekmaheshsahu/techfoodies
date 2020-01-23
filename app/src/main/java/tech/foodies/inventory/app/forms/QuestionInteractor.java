@@ -66,28 +66,6 @@ public class QuestionInteractor {
         return woman_id;
     }
 
-    public void saveReferralData(HashMap<String, String> highRiskList, String uniqueId, String formId) {
-    /*    ContentValues vals = new ContentValues();
-        Iterator<Map.Entry<String, String>> itr2 = highRiskList.entrySet().iterator();
-        while (itr2.hasNext()) {
-            Map.Entry<String, String> entry = itr2.next();
-            entry.getKey();
-            entry.getValue();
-            String myString = entry.getValue();
-            String[] a = myString.split(delimeter);
-
-            vals.put(DatabaseContract.ReferralTable.COLUMN_UNIQUE_ID, uniqueId);
-            vals.put(DatabaseContract.ReferralTable.COLUMN_NAME_FORM_ID, formId);
-            vals.put(DatabaseContract.ReferralTable.COLUMN_NAME_HIGH_RISK_KEYWORD, a[2]);
-            vals.put(DatabaseContract.ReferralTable.COLUMN_NAME_HIGH_RISK_ANSWER, a[3]);
-            vals.put(DatabaseContract.ReferralTable.COLUMN_NAME_REFERRAL_TYPE, a[5]);
-            vals.put(DatabaseContract.ReferralTable.COLUMN_NAME_STATUS, a[6]);
-
-            Utility.getDatabase().insert(DatabaseContract.ReferralTable.TABLE_NAME, null, vals);
-
-        }*/
-    }
-
     public int saveFilledFormStatus(String uniqueId, int formId, int completionStatus, int syncStatus, String createdOn) {
         ContentValues values = new ContentValues();
         values.put(DatabaseContract.FilledFormStatusTable.COLUMN_UNIQUE_ID, uniqueId);
@@ -377,48 +355,6 @@ public class QuestionInteractor {
         else return -1;
     }
 
-//    public CalculateVisit getNextVisitOf(String formId) {
-//        switch (Integer.valueOf(formId)){
-//            case ANC_SIX_VISIT_ID:
-//            case DELIVERY_FORM_ID:
-//            case WOMAN_CLOSURE_FORM_ID:
-//            case CC_TWELTH_VISIT_ID:
-//            case CHILD_CLOSURE_FORM_ID:
-//                return null;
-//            default:
-//                Cursor nextVisitCursor = fetchNextVisitFormInfo(formId);
-//                if (nextVisitCursor != null && nextVisitCursor.moveToFirst()){
-//                    String visitName = nextVisitCursor.getString(
-//                            nextVisitCursor.getColumnIndex(FormDetailsTable.COLUMN_VISIT_NAME));
-//                    int fromWeek = nextVisitCursor.getInt(
-//                            nextVisitCursor.getColumnIndex(FormDetailsTable.COLUMN_FROM_WEEKS));
-//                    int toWeek = nextVisitCursor.getInt(
-//                            nextVisitCursor.getColumnIndex(FormDetailsTable.COLUMN_TO_WEEKS));
-//                    CalculateVisit calculateVisit = new CalculateVisit(fromWeek,toWeek, visitName);
-//                    return calculateVisit;
-//                }
-//                else return null;
-//
-//        }
-    //  }
-
-//    public Cursor fetchNextVisitFormInfo(String  formId) {
-//        return utility.getDatabase().rawQuery(" SELECT "
-//                        + " * "
-//                        + " FROM "
-//                        + FormDetailsTable.TABLE_NAME
-//                        + " WHERE "
-//                        + " CAST ( " + FormDetailsTable.COLUMN_ORDER_ID + " AS INTEGER ) "
-//                        + " > CAST ( ("
-//                        + " SELECT " + FormDetailsTable.COLUMN_ORDER_ID
-//                        + " FROM "
-//                        + FormDetailsTable.TABLE_NAME
-//                        + " WHERE " + FormDetailsTable.COLUMN_FORM_ID + " =? )"
-//                        + " AS INTEGER )"
-//                        + " LIMIT 1"
-//                , new String[]{formId});
-//    }
-
     public HashMap<String, String> getFormFilledData(String uniqueId, int formId) {
         HashMap<String, String> hashMap = new HashMap<>();
         Cursor cursor = utility.getDatabase().rawQuery("SELECT * FROM "
@@ -460,19 +396,6 @@ public class QuestionInteractor {
 
         return wordList;
     }
-
-//    public void updateChildRegistrationDetails(String uniqueId, String firstName, String middleName, String lastName, String gender) {
-//        ContentValues values = new ContentValues();
-//        values.put(DatabaseContract.RegistrationTable.COLUMN_FIRST_NAME, firstName);
-//        values.put(DatabaseContract.RegistrationTable.COLUMN_GENDER, gender);
-//        values.put(DatabaseContract.RegistrationTable.COLUMN_REGISTRATION_STATUS, 1);
-//
-//        utility.getDatabase().update(DatabaseContract.RegistrationTable.TABLE_NAME
-//                , values
-//                , DatabaseContract.RegistrationTable.COLUMN_UNIQUE_ID + " = ? "
-//                , new String[]{uniqueId});
-//
-//    }
 
     public void updateClosureDetails(String uniqueId, String closeDate, String closeReason, String deathDate, String deathReason) {
         ContentValues values = new ContentValues();

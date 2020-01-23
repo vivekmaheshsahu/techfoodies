@@ -125,19 +125,6 @@ public class utility {
         return rc;
     }
 
-    public static ArrayList<String> getDeviceImeiNumber(Context context) {
-        TelephonyInfo telephonyInfo = TelephonyInfo.getInstance(context);
-        ArrayList<String> imeiArray = new ArrayList<>();
-        imeiArray.add("865770025862634");
-//        if (telephonyInfo.isDualSIM()) {
-//            imeiArray.add(telephonyInfo.getImsiSIM1());
-//            imeiArray.add(telephonyInfo.getImsiSIM2());
-//        } else {
-//            imeiArray.add(telephonyInfo.getImsiSIM1());
-//        }
-        return imeiArray;
-    }
-
     public static void setBadgeCount(Context context, LayerDrawable icon, int count) {
 
         BadgeDrawable badge;

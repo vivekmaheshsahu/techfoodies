@@ -486,17 +486,6 @@ public class SettingInteractor implements ISettingInteractor, LoaderManager.Load
             utility.getDatabase().execSQL(DatabaseContract.ValidationsTable.CREATE_TABLE);
         }
 
-      /*  void saveFormDetails(Form form) {
-            ContentValues values = new ContentValues();
-            values.put(FormDetailsTable.COLUMN_FORM_ID, form.getFormId());
-            values.put(FormDetailsTable.COLUMN_VISIT_NAME, form.getVisitName());
-            values.put(FormDetailsTable.COLUMN_FROM_WEEKS, form.getFromDays());
-            values.put(FormDetailsTable.COLUMN_TO_WEEKS, form.getToDays());
-            values.put(FormDetailsTable.COLUMN_ORDER_ID, form.getOrderId());
-
-            Utility.getDatabase().insert(DatabaseContract.FormDetailsTable.TABLE_NAME, null, values);
-        }*/
-
         void saveValidationData(int formId, int questionId, String compulsoryQstn, String custValCondition
                 , String custValMessage, String minRange, String maxRange, String rangeMessage
                 , String minLength, String maxLength, String LengthMessage, String displayCondition

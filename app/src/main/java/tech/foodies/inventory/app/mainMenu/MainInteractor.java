@@ -156,21 +156,6 @@ public class MainInteractor implements IMainInteractor, LoaderManager.LoaderCall
 
     @Override
     public int fetchUnregisteredChildCount(String motherId) {
-//        Cursor cursor = utility.getDatabase().query(DatabaseContract.RegistrationTable.TABLE_NAME,
-//                new String[]{DatabaseContract.RegistrationTable.COLUMN_ID},
-//                DatabaseContract.RegistrationTable.COLUMN_MOTHER_ID + " =? "
-//                        + " AND "
-//                        + DatabaseContract.RegistrationTable.COLUMN_REGISTRATION_STATUS + " = 0 ",
-//                new String[]{motherId},
-//                null,
-//                null,
-//                null);
-//        if (cursor != null && cursor.moveToFirst()) {
-//            int childCount = cursor.getCount();
-//            cursor.close();
-//            return childCount;
-//        }
-
         return 0;
     }
 
